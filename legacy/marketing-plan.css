@@ -1,0 +1,508 @@
+/* Imagine 2026 · Marketing Plan styles */
+
+/* ─── Light mode ──────────────────────────────── */
+[data-theme="light"] {
+  --neutral-1000: #F8F8F6;
+  --neutral-950:  #F0F0EE;
+  --neutral-900:  #E6E6E4;
+  --neutral-850:  #DADADD;
+  --neutral-800:  #CACAC8;
+  --neutral-700:  #A8A8A6;
+  --neutral-600:  #606060;
+  --neutral-550:  #525250;
+  --neutral-500:  #444442;
+  --neutral-400:  #363634;
+  --neutral-300:  #242422;
+  --neutral-200:  #181816;
+  --neutral-100:  #121210;
+  --neutral-50:   #0C0C0A;
+  --color-bg:             #F8F8F6;
+  --color-surface:        #EEEEEC;
+  --color-surface-alt:    #E4E4E2;
+  --color-border:         #CACAC8;
+  --color-border-subtle:  #D4D4D2;
+  --color-text:           #141414;
+  --color-text-muted:     #5A5A5A;
+}
+
+/* ─── Page layout ─────────────────────────────── */
+.mp-page {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 77.8px);
+}
+
+.mp-body {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: var(--space-7) var(--space-5) var(--space-8);
+  width: 100%;
+}
+
+/* ─── Hero ────────────────────────────────────── */
+.mp-hero {
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid var(--neutral-800);
+  background: var(--neutral-1000);
+  color: var(--neutral-50);
+}
+
+.mp-hero-visual {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.mp-hero-visual svg {
+  width: 100%;
+  height: 100%;
+}
+
+.mp-hero-inner {
+  position: relative;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: var(--space-8) var(--space-5);
+}
+
+.mp-hero-content {
+  max-width: 620px;
+}
+
+.mp-badge {
+  display: inline-block;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--papaya-base);
+  border: 1px solid rgba(236, 78, 11, 0.3);
+  padding: 4px 12px;
+  border-radius: var(--radius-sm);
+  margin-bottom: var(--space-4);
+}
+
+.mp-hero h1 {
+  font-size: 3.5rem;
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin-bottom: var(--space-4);
+}
+
+.mp-lead {
+  font-size: 1.0625rem;
+  color: var(--neutral-500);
+  line-height: 1.65;
+  max-width: 52ch;
+  margin-bottom: var(--space-6);
+}
+
+.mp-stats {
+  display: flex;
+  gap: var(--space-6);
+}
+
+.mp-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.mp-stat-value {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--neutral-50);
+  letter-spacing: -0.01em;
+}
+
+.mp-stat-label {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--neutral-600);
+}
+
+/* ─── Sections ────────────────────────────────── */
+.mp-section {
+  padding: var(--space-7) 0;
+  border-bottom: 1px solid var(--neutral-800);
+}
+
+.mp-section:last-child {
+  border-bottom: none;
+}
+
+.mp-section-tag {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--neutral-600);
+  margin-bottom: var(--space-3);
+}
+
+.mp-section h2 {
+  font-size: 1.75rem;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  color: var(--neutral-50);
+  margin-bottom: var(--space-5);
+}
+
+.mp-section p {
+  font-size: 0.9375rem;
+  color: var(--neutral-500);
+  line-height: 1.65;
+  max-width: 68ch;
+  margin-bottom: var(--space-3);
+}
+
+.mp-section-desc {
+  font-size: 0.9375rem;
+  color: var(--neutral-500);
+  line-height: 1.65;
+  margin-bottom: var(--space-5);
+}
+
+/* ─── Two-column ──────────────────────────────── */
+.mp-two-col {
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: var(--space-6);
+  align-items: start;
+}
+
+.mp-callout {
+  background: var(--neutral-900);
+  border: 1px solid var(--neutral-800);
+  border-radius: var(--radius-md);
+  padding: var(--space-5);
+  text-align: center;
+}
+
+.mp-callout-label {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--neutral-600);
+  margin-bottom: var(--space-3);
+}
+
+.mp-callout-value {
+  font-size: 3rem;
+  font-weight: 600;
+  color: var(--papaya-base);
+  letter-spacing: -0.02em;
+  line-height: 1;
+  margin-bottom: var(--space-2);
+}
+
+.mp-callout-desc {
+  font-size: 0.8125rem;
+  color: var(--neutral-500);
+  line-height: 1.5;
+}
+
+/* ─── Audience grid ───────────────────────────── */
+.mp-audience-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-3);
+}
+
+.mp-audience-card {
+  background: var(--neutral-900);
+  border: 1px solid var(--neutral-800);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+  transition: border-color 0.2s;
+}
+
+.mp-audience-card:hover {
+  border-color: var(--neutral-700);
+}
+
+.mp-audience-primary {
+  border-color: rgba(236, 78, 11, 0.25);
+}
+
+.mp-audience-primary:hover {
+  border-color: rgba(236, 78, 11, 0.5);
+}
+
+.mp-audience-tier {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--neutral-600);
+  margin-bottom: var(--space-2);
+}
+
+.mp-audience-primary .mp-audience-tier {
+  color: var(--papaya-base);
+}
+
+.mp-audience-card h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--neutral-100);
+  margin-bottom: var(--space-2);
+}
+
+.mp-audience-card p {
+  font-size: 0.875rem;
+  color: var(--neutral-500);
+  line-height: 1.6;
+  margin-bottom: var(--space-3);
+  max-width: none;
+}
+
+.mp-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.mp-tags span {
+  font-size: 0.625rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--neutral-600);
+  background: var(--neutral-850);
+  border: 1px solid var(--neutral-800);
+  padding: 3px 8px;
+  border-radius: 3px;
+}
+
+/* ─── KPI grid ────────────────────────────────── */
+.mp-kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-3);
+}
+
+.mp-kpi-card {
+  background: var(--neutral-900);
+  border: 1px solid var(--neutral-800);
+  border-radius: var(--radius-md);
+  padding: var(--space-4);
+}
+
+.mp-kpi-category {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--neutral-600);
+  margin-bottom: var(--space-2);
+}
+
+.mp-kpi-metric {
+  font-size: 2.25rem;
+  font-weight: 600;
+  color: var(--neutral-50);
+  letter-spacing: -0.02em;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.mp-kpi-unit {
+  font-size: 0.8125rem;
+  color: var(--neutral-500);
+  margin-bottom: var(--space-3);
+}
+
+.mp-kpi-target {
+  font-size: 0.6875rem;
+  color: var(--papaya-base);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+/* ─── Channel list ────────────────────────────── */
+.mp-channel-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.mp-channel {
+  display: grid;
+  grid-template-columns: 40px 1fr auto;
+  gap: var(--space-4);
+  align-items: start;
+  padding: var(--space-4) 0;
+  border-bottom: 1px solid var(--neutral-800);
+}
+
+.mp-channel:last-child {
+  border-bottom: none;
+}
+
+.mp-channel-index {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  color: var(--neutral-700);
+  letter-spacing: 0.06em;
+  padding-top: 3px;
+}
+
+.mp-channel-body h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--neutral-100);
+  margin-bottom: var(--space-2);
+}
+
+.mp-channel-body p {
+  font-size: 0.875rem;
+  color: var(--neutral-500);
+  line-height: 1.6;
+  margin: 0;
+  max-width: none;
+}
+
+.mp-channel-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+  padding-top: 2px;
+}
+
+.mp-channel-budget {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--neutral-50);
+  letter-spacing: -0.01em;
+}
+
+.mp-channel-weight {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: var(--neutral-600);
+}
+
+/* ─── Timeline ────────────────────────────────── */
+.mp-timeline {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-4);
+}
+
+.mp-quarter-label {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--neutral-600);
+  margin-bottom: var(--space-3);
+}
+
+.mp-quarter-bar {
+  height: 3px;
+  background: var(--neutral-800);
+  border-radius: 2px;
+  margin-bottom: var(--space-4);
+  position: relative;
+  overflow: hidden;
+}
+
+.mp-quarter-bar::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  width: calc(var(--fill) * 100%);
+  background: var(--papaya-base);
+  border-radius: 2px;
+}
+
+.mp-quarter-items {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.mp-item {
+  font-size: 0.8125rem;
+  color: var(--neutral-500);
+  line-height: 1.5;
+  padding: 6px 0;
+  border-bottom: 1px solid var(--neutral-900);
+}
+
+.mp-item-accent {
+  color: var(--neutral-100);
+  font-weight: 600;
+}
+
+/* ─── Budget ──────────────────────────────────── */
+.mp-budget-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.mp-budget-row {
+  display: grid;
+  grid-template-columns: 180px 1fr 48px 64px;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.mp-budget-label {
+  font-size: 0.875rem;
+  color: var(--neutral-400);
+}
+
+.mp-budget-bar-wrap {
+  height: 4px;
+  background: var(--neutral-850);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.mp-budget-bar {
+  height: 100%;
+  width: var(--pct);
+  background: var(--papaya-base);
+  border-radius: 2px;
+}
+
+.mp-budget-pct {
+  font-size: 0.75rem;
+  color: var(--neutral-600);
+  text-align: right;
+  font-weight: 600;
+}
+
+.mp-budget-amt {
+  font-size: 0.875rem;
+  color: var(--neutral-400);
+  text-align: right;
+  font-weight: 600;
+}
+
+/* ─── Nav active state ────────────────────────── */
+.nav-active {
+  color: var(--neutral-50) !important;
+}
+
+/* ─── Responsive ──────────────────────────────── */
+@media (max-width: 768px) {
+  .mp-hero h1 { font-size: 2.25rem; }
+  .mp-stats { gap: var(--space-4); flex-wrap: wrap; }
+  .mp-two-col { grid-template-columns: 1fr; }
+  .mp-audience-grid { grid-template-columns: 1fr; }
+  .mp-kpi-grid { grid-template-columns: repeat(2, 1fr); }
+  .mp-timeline { grid-template-columns: repeat(2, 1fr); }
+  .mp-budget-row { grid-template-columns: 140px 1fr 40px; }
+  .mp-budget-amt { display: none; }
+  .mp-channel { grid-template-columns: 32px 1fr auto; }
+}

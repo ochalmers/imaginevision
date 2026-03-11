@@ -30,3 +30,7 @@ yarn-error.log*
 # OS
 .DS_Store
 Thumbs.db
+
+# Root-level font duplicates (app uses app/fonts/)
+/PPNeueMontreal-*
+
