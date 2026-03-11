@@ -51,6 +51,31 @@
   --radius-sm: 4px;
 }
 
+/* ─── Light mode ──────────────────────────────── */
+[data-theme="light"] {
+  --neutral-1000: #F8F8F6;
+  --neutral-950:  #F0F0EE;
+  --neutral-900:  #E6E6E4;
+  --neutral-850:  #DADADD;
+  --neutral-800:  #CACAC8;
+  --neutral-700:  #A8A8A6;
+  --neutral-600:  #606060;
+  --neutral-550:  #525250;
+  --neutral-500:  #444442;
+  --neutral-400:  #363634;
+  --neutral-300:  #242422;
+  --neutral-200:  #181816;
+  --neutral-100:  #121210;
+  --neutral-50:   #0C0C0A;
+  --color-bg:             #F8F8F6;
+  --color-surface:        #EEEEEC;
+  --color-surface-alt:    #E4E4E2;
+  --color-border:         #CACAC8;
+  --color-border-subtle:  #D4D4D2;
+  --color-text:           #141414;
+  --color-text-muted:     #5A5A5A;
+}
+
 body {
   font-family: var(--font-sans);
   background-color: var(--neutral-1000);
@@ -59,6 +84,27 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+}
+
+/* ─── Theme toggle ────────────────────────────── */
+.theme-toggle {
+  background: transparent;
+  border: 1px solid var(--neutral-800);
+  color: var(--neutral-600);
+  cursor: pointer;
+  padding: 4px 12px;
+  border-radius: var(--radius-sm);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  font-family: var(--font-sans);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.theme-toggle:hover {
+  border-color: var(--neutral-600);
+  color: var(--neutral-50);
 }
 
 .site-header {
@@ -97,6 +143,15 @@ body {
   color: var(--neutral-50);
 }
 
+/* ─── Hero visual ─────────────────────────────── */
+.hero-visual {
+  position: absolute;
+  width: min(480px, 80vw);
+  height: min(480px, 80vw);
+  pointer-events: none;
+  color: var(--neutral-50);
+}
+
 .hero {
   flex: 1;
   display: flex;
@@ -107,6 +162,7 @@ body {
   padding: var(--space-7) var(--space-5);
   max-width: var(--max-width);
   margin: 0 auto;
+  position: relative;
 }
 
 .hero h1 {
@@ -132,7 +188,7 @@ body {
   font-size: 0.9375rem;
   font-weight: 600;
   padding: var(--space-2) var(--space-4);
-  border-radius: 9999px;
+  border-radius: var(--radius-sm);
   text-decoration: none;
   display: inline-block;
   transition:

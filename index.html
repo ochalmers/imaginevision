@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Imagine 2026</title>
   <link rel="stylesheet" href="style.css" />
+  <script>const t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t);</script>
   <script src="https://mcp.figma.com/mcp/html-to-design/capture.js" async></script>
 </head>
 <body>
@@ -12,10 +13,34 @@
     <a href="/" class="logo">Imagine <span class="logo-year">2026</span></a>
     <nav class="nav">
       <a href="design-system.html">Design System</a>
+      <a href="marketing-plan.html">Marketing Plan</a>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle color scheme">Light</button>
     </nav>
   </header>
 
   <main class="hero">
+    <div class="hero-visual" aria-hidden="true">
+      <svg viewBox="0 0 480 480" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="240" cy="240" r="220" stroke="currentColor" stroke-opacity="0.05" stroke-width="1"/>
+        <circle cx="240" cy="240" r="176" stroke="currentColor" stroke-opacity="0.07" stroke-width="1"/>
+        <circle cx="240" cy="240" r="132" stroke="currentColor" stroke-opacity="0.09" stroke-width="1"/>
+        <circle cx="240" cy="240" r="88"  stroke="currentColor" stroke-opacity="0.10" stroke-width="1"/>
+        <circle cx="240" cy="240" r="44"  stroke="currentColor" stroke-opacity="0.11" stroke-width="1"/>
+        <line x1="240" y1="18"  x2="240" y2="462" stroke="currentColor" stroke-opacity="0.05" stroke-width="1" stroke-dasharray="2 9"/>
+        <line x1="18"  y1="240" x2="462" y2="240" stroke="currentColor" stroke-opacity="0.05" stroke-width="1" stroke-dasharray="2 9"/>
+        <line x1="84"  y1="84"  x2="396" y2="396" stroke="currentColor" stroke-opacity="0.03" stroke-width="1" stroke-dasharray="2 9"/>
+        <line x1="396" y1="84"  x2="84"  y2="396" stroke="currentColor" stroke-opacity="0.03" stroke-width="1" stroke-dasharray="2 9"/>
+        <circle cx="240" cy="240" r="5"   fill="#EC4E0B" fill-opacity="0.8"/>
+        <circle cx="240" cy="18"  r="2.5" fill="#EC4E0B" fill-opacity="0.35"/>
+        <circle cx="240" cy="462" r="2.5" fill="#EC4E0B" fill-opacity="0.35"/>
+        <circle cx="18"  cy="240" r="2.5" fill="#EC4E0B" fill-opacity="0.35"/>
+        <circle cx="462" cy="240" r="2.5" fill="#EC4E0B" fill-opacity="0.35"/>
+        <circle cx="84"  cy="84"  r="2"   fill="#EC4E0B" fill-opacity="0.2"/>
+        <circle cx="396" cy="84"  r="2"   fill="#EC4E0B" fill-opacity="0.2"/>
+        <circle cx="84"  cy="396" r="2"   fill="#EC4E0B" fill-opacity="0.2"/>
+        <circle cx="396" cy="396" r="2"   fill="#EC4E0B" fill-opacity="0.2"/>
+      </svg>
+    </div>
     <h1>Imagine what's next</h1>
     <p class="hero-lead">A vision for 2026. Built on a foundation of thoughtful design and clear guidelines.</p>
     <a href="design-system.html" class="btn btn-primary">View Design System</a>
@@ -24,5 +49,20 @@
   <footer class="site-footer">
     <p>&copy; 2026 Imagine Vision</p>
   </footer>
+
+  <script>
+    const toggle = document.getElementById('theme-toggle');
+    function syncToggle() {
+      const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+      toggle.textContent = isDark ? 'Light' : 'Dark';
+    }
+    syncToggle();
+    toggle.addEventListener('click', () => {
+      const next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+      syncToggle();
+    });
+  </script>
 </body>
 </html>

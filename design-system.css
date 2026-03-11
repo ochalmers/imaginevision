@@ -92,6 +92,56 @@
   --radius-full: 9999px;
 }
 
+/* ─── Light mode ──────────────────────────────── */
+[data-theme="light"] {
+  --neutral-1000: #F8F8F6;
+  --neutral-950:  #F0F0EE;
+  --neutral-900:  #E6E6E4;
+  --neutral-850:  #DADADD;
+  --neutral-800:  #CACAC8;
+  --neutral-700:  #A8A8A6;
+  --neutral-600:  #606060;
+  --neutral-550:  #525250;
+  --neutral-500:  #444442;
+  --neutral-400:  #363634;
+  --neutral-300:  #242422;
+  --neutral-200:  #181816;
+  --neutral-100:  #121210;
+  --neutral-50:   #0C0C0A;
+  --color-bg:             #F8F8F6;
+  --color-surface:        #EEEEEC;
+  --color-surface-alt:    #E4E4E2;
+  --color-border:         #CACAC8;
+  --color-border-subtle:  #D4D4D2;
+  --color-text:           #141414;
+  --color-text-muted:     #5A5A5A;
+}
+
+/* ─── Theme toggle ────────────────────────────── */
+.theme-toggle {
+  background: transparent;
+  border: 1px solid var(--neutral-800);
+  color: var(--neutral-600);
+  cursor: pointer;
+  padding: 4px 12px;
+  border-radius: var(--radius-sm);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  font-family: var(--font-sans);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: border-color 0.2s, color 0.2s;
+  display: block;
+  width: 100%;
+  text-align: left;
+  margin-bottom: var(--space-3);
+}
+
+.theme-toggle:hover {
+  border-color: var(--neutral-600);
+  color: var(--neutral-50);
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -123,21 +173,12 @@ body {
   margin-bottom: var(--space-6);
 }
 
-.logo {
-  font-size: 1.125rem;
-  font-weight: 600;
-  letter-spacing: -0.01em;
-  color: var(--neutral-50);
-}
-
-.logo-year {
-  display: block;
+.sidebar-year {
   font-size: 0.6875rem;
   font-weight: 500;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--neutral-600);
-  margin-top: 3px;
 }
 
 .sidebar-nav {
@@ -182,6 +223,22 @@ body {
   max-width: calc(100vw - var(--sidebar-width));
 }
 
+/* ─── DS header visual ─────────────────────────── */
+.ds-visual {
+  width: 100%;
+  height: 120px;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  margin-bottom: var(--space-6);
+  background: var(--color-surface);
+  color: var(--neutral-50);
+}
+
+.ds-visual svg {
+  width: 100%;
+  height: 100%;
+}
+
 .page-header {
   margin-bottom: var(--space-7);
   padding-bottom: var(--space-6);
@@ -197,6 +254,7 @@ body {
 }
 
 .lead {
+  font-family: 'Inter', system-ui, sans-serif;
   font-size: 1rem;
   color: var(--color-text-muted);
   max-width: 56ch;

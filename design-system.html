@@ -1,18 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Imagine 2026 · Design System</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="design-system.css" />
+  <script>const t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t);</script>
   <script src="https://mcp.figma.com/mcp/html-to-design/capture.js" async></script>
 </head>
 <body>
   <aside class="sidebar">
     <div class="sidebar-header">
-      <span class="logo">Imagine
-        <span class="logo-year">2026</span>
-      </span>
+      <span class="sidebar-year">2026</span>
     </div>
     <nav class="sidebar-nav">
       <a href="#overview">Overview</a>
@@ -23,14 +25,49 @@
       <a href="#guidelines">Guidelines</a>
     </nav>
     <div class="sidebar-footer">
-      <a href="https://www.figma.com/design/RqdCXAiEfCPticNxdLwaEK/Imagine-2026?node-id=22-601&m=dev" target="_blank" rel="noopener">View in Figma ↗</a>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle color scheme">Light</button>
+      <a href="https://www.figma.com/design/8cnTYi4NfDKiTqZGazJJpb/MCP-Test?node-id=0-1" target="_blank" rel="noopener">MCP Test file ↗</a>
     </div>
   </aside>
 
   <main class="content">
     <header class="page-header">
-      <h1>Design System</h1>
-      <p class="lead">Foundations for the Imagine 2026 experience — color, type, spacing, and components derived directly from the <a href="https://www.figma.com/design/RqdCXAiEfCPticNxdLwaEK/Imagine-2026" target="_blank" rel="noopener">Figma source file</a>.</p>
+      <div class="ds-visual" aria-hidden="true">
+        <svg viewBox="0 0 1200 160" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+          <defs>
+            <radialGradient id="g1" cx="15%" cy="50%" r="40%">
+              <stop offset="0%" stop-color="#EC4E0B" stop-opacity="0.5"/>
+              <stop offset="100%" stop-color="#EC4E0B" stop-opacity="0"/>
+            </radialGradient>
+            <radialGradient id="g2" cx="45%" cy="50%" r="35%">
+              <stop offset="0%" stop-color="#F2784A" stop-opacity="0.3"/>
+              <stop offset="100%" stop-color="#F2784A" stop-opacity="0"/>
+            </radialGradient>
+            <radialGradient id="g3" cx="75%" cy="50%" r="45%">
+              <stop offset="0%" stop-color="#FAC4AD" stop-opacity="0.2"/>
+              <stop offset="100%" stop-color="#FAC4AD" stop-opacity="0"/>
+            </radialGradient>
+          </defs>
+          <rect width="1200" height="160" fill="url(#g1)"/>
+          <rect width="1200" height="160" fill="url(#g2)"/>
+          <rect width="1200" height="160" fill="url(#g3)"/>
+          <!-- Grid lines -->
+          <line x1="0" y1="40"  x2="1200" y2="40"  stroke="currentColor" stroke-opacity="0.04" stroke-width="1"/>
+          <line x1="0" y1="80"  x2="1200" y2="80"  stroke="currentColor" stroke-opacity="0.04" stroke-width="1"/>
+          <line x1="0" y1="120" x2="1200" y2="120" stroke="currentColor" stroke-opacity="0.04" stroke-width="1"/>
+          <line x1="200"  y1="0" x2="200"  y2="160" stroke="currentColor" stroke-opacity="0.04" stroke-width="1"/>
+          <line x1="400"  y1="0" x2="400"  y2="160" stroke="currentColor" stroke-opacity="0.04" stroke-width="1"/>
+          <line x1="600"  y1="0" x2="600"  y2="160" stroke="currentColor" stroke-opacity="0.04" stroke-width="1"/>
+          <line x1="800"  y1="0" x2="800"  y2="160" stroke="currentColor" stroke-opacity="0.04" stroke-width="1"/>
+          <line x1="1000" y1="0" x2="1000" y2="160" stroke="currentColor" stroke-opacity="0.04" stroke-width="1"/>
+          <!-- Accent dots -->
+          <circle cx="180" cy="80" r="3" fill="#EC4E0B" fill-opacity="0.6"/>
+          <circle cx="540" cy="80" r="3" fill="#EC4E0B" fill-opacity="0.4"/>
+          <circle cx="960" cy="80" r="3" fill="#EC4E0B" fill-opacity="0.3"/>
+        </svg>
+      </div>
+      <h1>Design System Thinking</h1>
+      <p class="lead">Foundations for the Imagine 2026 experience — color, type, spacing, and components derived directly from the <a href="https://www.figma.com/design/8cnTYi4NfDKiTqZGazJJpb/MCP-Test" target="_blank" rel="noopener">Figma source file</a>.</p>
     </header>
 
     <!-- ─── Overview ─────────────────────────────── -->
@@ -202,8 +239,23 @@ font-weight: 600;   /* bold / headings  */</code></pre>
     </section>
 
     <footer class="page-footer">
-      <p>Imagine 2026 Design System &mdash; <a href="https://www.figma.com/design/RqdCXAiEfCPticNxdLwaEK/Imagine-2026?node-id=22-601&m=dev" target="_blank" rel="noopener">Figma source ↗</a></p>
+      <p>Imagine 2026 Design System &mdash; <a href="https://www.figma.com/design/8cnTYi4NfDKiTqZGazJJpb/MCP-Test?node-id=3-2" target="_blank" rel="noopener">Figma source ↗</a></p>
     </footer>
   </main>
+
+  <script>
+    const toggle = document.getElementById('theme-toggle');
+    function syncToggle() {
+      const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+      toggle.textContent = isDark ? 'Light' : 'Dark';
+    }
+    syncToggle();
+    toggle.addEventListener('click', () => {
+      const next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+      syncToggle();
+    });
+  </script>
 </body>
 </html>
