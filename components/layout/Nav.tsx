@@ -7,6 +7,7 @@ import { useState } from 'react'
 const navLinks = [
   { href: '/platform', label: 'Platform' },
   { href: '/solutions', label: 'Solutions' },
+  { href: '/configurator', label: 'Configurator' },
   { href: '/industries', label: 'Industries' },
   { href: '/developers', label: 'Developers' },
   { href: '/resources', label: 'Resources' },
@@ -18,9 +19,9 @@ export default function Nav() {
   const [mobileOpen, setMobileOpen] = useState(false)
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 h-16 border-b border-wire/50 bg-canvas/90 backdrop-blur-md">
+    <header className="fixed top-0 left-0 right-0 z-50 h-16 border-b border-border-secondary bg-surface-page/90 backdrop-blur-md">
       <nav className="container flex h-full items-center justify-between">
-        <Link href="/" className="text-xl font-semibold tracking-tight text-ink">
+        <Link href="/" className="text-h5 font-semibold text-text-heading">
           Imagine
         </Link>
 
@@ -32,8 +33,8 @@ export default function Nav() {
                 className={`nav-link text-sm ${
                   (link.href === '/about'
                     ? ['/about', '/careers', '/contact'].includes(pathname || '')
-                    : pathname?.startsWith(link.href))
-                    ? 'text-ink'
+                    :                   pathname?.startsWith(link.href))
+                    ? 'text-text-heading'
                     : ''
                 }`}
               >
@@ -56,22 +57,22 @@ export default function Nav() {
             className="flex h-10 w-10 flex-col items-center justify-center gap-1.5 md:hidden"
             aria-label="Toggle menu"
           >
-            <span className={`h-0.5 w-5 bg-ink transition-transform ${mobileOpen ? 'translate-y-2 rotate-45' : ''}`} />
-            <span className={`h-0.5 w-5 bg-ink transition-opacity ${mobileOpen ? 'opacity-0' : ''}`} />
-            <span className={`h-0.5 w-5 bg-ink transition-transform ${mobileOpen ? '-translate-y-2 -rotate-45' : ''}`} />
+            <span className={`h-0.5 w-5 bg-text-heading transition-transform ${mobileOpen ? 'translate-y-2 rotate-45' : ''}`} />
+            <span className={`h-0.5 w-5 bg-text-heading transition-opacity ${mobileOpen ? 'opacity-0' : ''}`} />
+            <span className={`h-0.5 w-5 bg-text-heading transition-transform ${mobileOpen ? '-translate-y-2 -rotate-45' : ''}`} />
           </button>
         </div>
       </nav>
 
       {mobileOpen && (
-        <div className="absolute top-16 left-0 right-0 border-b border-wire bg-canvas p-6 md:hidden">
+        <div className="absolute top-16 left-0 right-0 border-b border-border-secondary bg-surface-page p-s-600 md:hidden">
           <ul className="space-y-4">
             {navLinks.map((link) => (
               <li key={link.href}>
                 <Link
                   href={link.href}
                   onClick={() => setMobileOpen(false)}
-                  className="block py-2 text-lg text-ink hover:text-accent"
+                  className="block py-s-200 text-body-lg text-text-heading hover:text-text-primary"
                 >
                   {link.label}
                 </Link>

@@ -18,7 +18,7 @@ export default function DevelopersExamplesPage() {
         subtitle="Working code examples across every major use case. Each one is forkable, sandbox-ready, and built on real Imagine API calls."
         primaryCta={{ href: 'https://github.com', label: 'Open GitHub Repo' }}
       >
-        <div className="mt-8 flex flex-wrap justify-center gap-8 text-sm text-ash">
+        <div className="mt-8 flex flex-wrap justify-center gap-8 text-sm text-text-body">
           <span>8 working examples</span>
           <span>React, Next.js, Node.js</span>
           <span>Fork and deploy in under 5 minutes</span>
@@ -38,11 +38,11 @@ export default function DevelopersExamplesPage() {
             <div key={item.title} className="card">
               <div className="flex flex-wrap gap-2">
                 {item.stack.split(', ').map((s) => (
-                  <span key={s} className="rounded border border-wire px-2 py-0.5 text-xs text-ash">{s}</span>
+                  <span key={s} className="rounded border border-border-secondary px-2 py-0.5 text-xs text-text-body">{s}</span>
                 ))}
               </div>
-              <h3 className="mt-3 font-semibold text-ink">{item.title}</h3>
-              <p className="mt-2 text-sm text-ash">{item.desc}</p>
+              <h3 className="mt-3 font-semibold text-text-heading">{item.title}</h3>
+              <p className="mt-2 text-sm text-text-body">{item.desc}</p>
               <div className="mt-4 flex gap-2">
                 <Link href="#" className="btn btn-sm btn-secondary">Open in Sandbox</Link>
                 <Link href="#" className="btn btn-sm btn-ghost">View on GitHub</Link>

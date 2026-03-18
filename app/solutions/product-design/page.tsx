@@ -29,7 +29,7 @@ export default function ProductDesignPage() {
             'Launch — same assets become PDP, marketing, and sales materials',
           ].map((step) => (
             <div key={step} className="card">
-              <p className="text-sm text-ash">{step}</p>
+              <p className="text-sm text-text-body">{step}</p>
             </div>
           ))}
         </div>

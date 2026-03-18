@@ -38,8 +38,8 @@ const imagine = new Imagine({
       >
         <div className="mt-12 space-y-8">
           <div>
-            <h3 className="font-mono text-ink">imagine.render()</h3>
-            <p className="mt-2 text-sm text-ash">Trigger a render and await the result. SDK polls for completion.</p>
+            <h3 className="font-mono text-text-heading">imagine.render()</h3>
+            <p className="mt-2 text-sm text-text-body">Trigger a render and await the result. SDK polls for completion.</p>
             <div className="mt-4">
               <CodeBlock
                 code={`const result = await imagine.render({
@@ -52,12 +52,12 @@ const imagine = new Imagine({
             </div>
           </div>
           <div>
-            <h3 className="font-mono text-ink">imagine.configure()</h3>
-            <p className="mt-2 text-sm text-ash">Validate configuration against product rules. Returns violations if invalid.</p>
+            <h3 className="font-mono text-text-heading">imagine.configure()</h3>
+            <p className="mt-2 text-sm text-text-body">Validate configuration against product rules. Returns violations if invalid.</p>
           </div>
           <div>
-            <h3 className="font-mono text-ink">imagine.products.get()</h3>
-            <p className="mt-2 text-sm text-ash">Retrieve product with full option tree, scenes, pricing modifiers.</p>
+            <h3 className="font-mono text-text-heading">imagine.products.get()</h3>
+            <p className="mt-2 text-sm text-text-body">Retrieve product with full option tree, scenes, pricing modifiers.</p>
           </div>
         </div>
       </Section>

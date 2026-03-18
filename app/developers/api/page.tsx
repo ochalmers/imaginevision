@@ -32,11 +32,11 @@ Versioning: URL path — /v1/`}
       <Section
         title="Designed to be obvious."
       >
-        <div className="mt-12 space-y-4 text-ash">
-          <p><strong className="text-ink">Predictable resource naming</strong> — Every endpoint follows noun-first pattern. /v1/products, /v1/renders, /v1/configurations.</p>
-          <p><strong className="text-ink">Consistent error shapes</strong> — Same JSON structure with code, message, and details array. Your error handling works everywhere.</p>
-          <p><strong className="text-ink">Idempotent writes</strong> — Optional idempotency_key on POST. Submit twice, get same response. No duplicates.</p>
-          <p><strong className="text-ink">Pagination that works</strong> — Cursor-based. Pass after and limit. Response includes next_cursor and has_more.</p>
+        <div className="mt-12 space-y-4 text-text-body">
+          <p><strong className="text-text-heading">Predictable resource naming</strong> — Every endpoint follows noun-first pattern. /v1/products, /v1/renders, /v1/configurations.</p>
+          <p><strong className="text-text-heading">Consistent error shapes</strong> — Same JSON structure with code, message, and details array. Your error handling works everywhere.</p>
+          <p><strong className="text-text-heading">Idempotent writes</strong> — Optional idempotency_key on POST. Submit twice, get same response. No duplicates.</p>
+          <p><strong className="text-text-heading">Pagination that works</strong> — Cursor-based. Pass after and limit. Response includes next_cursor and has_more.</p>
         </div>
       </Section>
 
@@ -46,25 +46,25 @@ Versioning: URL path — /v1/`}
         <div className="mt-12 overflow-x-auto">
           <table className="w-full text-sm">
             <thead>
-              <tr className="border-b border-wire">
-                <th className="py-3 text-left font-medium text-ink">Group</th>
-                <th className="py-3 text-left font-medium text-ink">Endpoints</th>
+              <tr className="border-b border-border-secondary">
+                <th className="py-3 text-left font-medium text-text-heading">Group</th>
+                <th className="py-3 text-left font-medium text-text-heading">Endpoints</th>
               </tr>
             </thead>
-            <tbody className="text-ash">
-              <tr className="border-b border-wire/50">
+            <tbody className="text-text-body">
+              <tr className="border-b border-border-secondary/50">
                 <td className="py-3 font-mono">/v1/renders</td>
                 <td>POST create, GET status, GET image</td>
               </tr>
-              <tr className="border-b border-wire/50">
+              <tr className="border-b border-border-secondary/50">
                 <td className="py-3 font-mono">/v1/configurations</td>
                 <td>POST validate, POST save, GET retrieve</td>
               </tr>
-              <tr className="border-b border-wire/50">
+              <tr className="border-b border-border-secondary/50">
                 <td className="py-3 font-mono">/v1/products</td>
                 <td>GET list, GET :id, GET :id/options</td>
               </tr>
-              <tr className="border-b border-wire/50">
+              <tr className="border-b border-border-secondary/50">
                 <td className="py-3 font-mono">/v1/experiences</td>
                 <td>POST create, GET :id, PATCH :id</td>
               </tr>
@@ -110,16 +110,16 @@ Versioning: URL path — /v1/`}
         <div className="mt-12 overflow-x-auto">
           <table className="w-full text-sm">
             <thead>
-              <tr className="border-b border-wire">
-                <th className="py-3 text-left font-medium text-ink">Plan</th>
-                <th className="py-3 text-left font-medium text-ink">Requests/min</th>
-                <th className="py-3 text-left font-medium text-ink">Renders/hour</th>
+              <tr className="border-b border-border-secondary">
+                <th className="py-3 text-left font-medium text-text-heading">Plan</th>
+                <th className="py-3 text-left font-medium text-text-heading">Requests/min</th>
+                <th className="py-3 text-left font-medium text-text-heading">Renders/hour</th>
               </tr>
             </thead>
-            <tbody className="text-ash">
-              <tr className="border-b border-wire/50"><td className="py-2">Starter</td><td>60</td><td>200</td></tr>
-              <tr className="border-b border-wire/50"><td className="py-2">Growth</td><td>300</td><td>2,000</td></tr>
-              <tr className="border-b border-wire/50"><td className="py-2">Scale</td><td>1,000</td><td>Unlimited</td></tr>
+            <tbody className="text-text-body">
+              <tr className="border-b border-border-secondary/50"><td className="py-2">Starter</td><td>60</td><td>200</td></tr>
+              <tr className="border-b border-border-secondary/50"><td className="py-2">Growth</td><td>300</td><td>2,000</td></tr>
+              <tr className="border-b border-border-secondary/50"><td className="py-2">Scale</td><td>1,000</td><td>Unlimited</td></tr>
             </tbody>
           </table>
         </div>

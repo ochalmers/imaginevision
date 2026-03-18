@@ -20,32 +20,32 @@ export default function ContactPage() {
           <div className="grid gap-8 md:grid-cols-3">
             <div className="card">
               <p className="section-tag">For companies</p>
-              <h3 className="mt-2 font-semibold text-ink">Sales enquiry</h3>
-              <p className="mt-2 text-sm text-ash">
+              <h3 className="mt-2 font-semibold text-text-heading">Sales enquiry</h3>
+              <p className="mt-2 text-sm text-text-body">
                 Interested in Imagine for your products? Talk to our team about what configurable commerce looks like for your brand.
               </p>
               <a href="/contact" className="btn btn-primary mt-4 inline-flex">Request a demo</a>
             </div>
             <div className="card">
               <p className="section-tag">For developers</p>
-              <h3 className="mt-2 font-semibold text-ink">Developer support</h3>
-              <p className="mt-2 text-sm text-ash">
+              <h3 className="mt-2 font-semibold text-text-heading">Developer support</h3>
+              <p className="mt-2 text-sm text-text-body">
                 Technical questions about the API, SDK, or platform? Reach our developer support team.
               </p>
-              <a href="mailto:developer-support@imagine.com" className="mt-4 block text-accent hover:underline">developer-support@imagine.com</a>
+              <a href="mailto:developer-support@imagine.com" className="mt-4 block text-text-primary hover:underline">developer-support@imagine.com</a>
             </div>
             <div className="card">
               <p className="section-tag">Other</p>
-              <h3 className="mt-2 font-semibold text-ink">Press, partnerships, other</h3>
-              <p className="mt-2 text-sm text-ash">
+              <h3 className="mt-2 font-semibold text-text-heading">Press, partnerships, other</h3>
+              <p className="mt-2 text-sm text-text-body">
                 For media enquiries, partnership discussions, or anything else.
               </p>
-              <a href="mailto:hello@imagine.com" className="mt-4 block text-accent hover:underline">hello@imagine.com</a>
+              <a href="mailto:hello@imagine.com" className="mt-4 block text-text-primary hover:underline">hello@imagine.com</a>
             </div>
           </div>
 
           <div className="mt-16">
-            <h2 className="text-xl font-semibold text-ink">Send a message</h2>
+            <h2 className="text-xl font-semibold text-text-heading">Send a message</h2>
             <form className="mt-6 max-w-xl space-y-4">
               <div>
                 <label htmlFor="name" className="form-label">Name</label>

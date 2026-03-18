@@ -1,3 +1,5 @@
+@import './prism-tokens.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -5,15 +7,20 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    min-height: 100%;
   }
 
   body {
-    @apply bg-canvas text-ink antialiased;
-    font-family: var(--font-pp), system-ui, -apple-system, sans-serif;
+    @apply antialiased;
+    min-height: 100vh;
+    background-color: var(--surface-page);
+    color: var(--text-default-body);
+    font-family: var(--font-primary);
   }
 
   h1, h2, h3, h4, h5, h6 {
     @apply font-sans;
+    color: var(--text-default-heading);
   }
 
   * {
@@ -21,99 +28,131 @@
   }
 
   ::selection {
-    background: rgba(236, 78, 11, 0.3);
-    color: #F2F2F0;
+    background: rgba(236, 78, 11, 0.2);
+    color: var(--text-default-heading);
   }
 }
 
 @layer components {
   .section-tag {
-    @apply text-xs font-semibold tracking-widest uppercase text-accent;
+    @apply text-caption font-semibold tracking-widest uppercase;
+    color: var(--text-primary-default);
   }
 
   .container {
-    @apply w-full max-w-content mx-auto px-4 md:px-8;
+    @apply w-full max-w-content mx-auto px-s-400 md:px-s-600;
   }
 
   .section {
-    @apply py-9;
+    @apply py-s-900;
   }
 
   .section-sm {
-    @apply py-7;
+    @apply py-s-700;
   }
 
-  /* Buttons */
+  /* Buttons — Prism semantic tokens */
   .btn {
-    @apply inline-flex items-center justify-center gap-2 rounded-md font-semibold transition-all duration-150 cursor-pointer border-0 no-underline;
+    @apply inline-flex items-center justify-center gap-s-200 rounded-prism-200 font-semibold transition-all duration-150 cursor-pointer border-0 no-underline;
   }
 
-  .btn-sm { @apply px-3 py-2 text-sm h-8; }
-  .btn-md { @apply px-5 py-2.5 text-base h-10; }
-  .btn-lg { @apply px-6 py-3 text-md h-12; }
+  .btn-sm { @apply px-s-300 py-s-200 text-small h-8; }
+  .btn-md { @apply px-s-500 py-s-300 text-body h-10; }
+  .btn-lg { @apply px-s-600 py-s-300 text-body-lg h-12; }
 
   .btn-primary {
-    @apply btn btn-md bg-accent text-white hover:bg-accent-dark;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.4);
+    @apply btn btn-md text-text-on-color-heading;
+    background-color: var(--surface-primary-default);
   }
   .btn-primary:hover {
-    box-shadow: 0 4px 20px rgba(236,78,11,0.25);
+    background-color: var(--surface-primary-default-hover);
+    box-shadow: 0 4px 20px rgba(236, 78, 11, 0.25);
   }
 
   .btn-secondary {
-    @apply btn btn-md bg-surface-alt text-ink border border-wire hover:bg-surface-border;
+    @apply btn btn-md text-text-body border border-border-secondary;
+    background-color: var(--surface-default-secondary);
+  }
+  .btn-secondary:hover {
+    background-color: var(--surface-primary-default-subtle);
+    border-color: var(--border-primary-default);
   }
 
   .btn-ghost {
-    @apply btn btn-md bg-transparent text-ash border border-wire hover:text-ink hover:border-surface-alt;
+    @apply btn btn-md bg-transparent border border-border-secondary;
+    color: var(--text-default-body);
+  }
+  .btn-ghost:hover {
+    color: var(--text-default-heading);
+    border-color: var(--border-primary-default);
   }
 
   /* Cards */
   .card {
-    @apply bg-surface border border-wire rounded-lg p-5 transition-all duration-200;
+    @apply border border-border-secondary rounded-prism-200 p-s-500 transition-all duration-200;
+    background-color: var(--surface-default);
   }
 
   .card:hover {
-    @apply border-surface-alt;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+    border-color: var(--border-primary-default-subtle);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
   }
 
   /* Code blocks */
   .code-block {
-    @apply bg-code-bg border border-wire rounded-lg p-5 font-mono text-sm leading-relaxed text-code-text overflow-x-auto;
+    @apply border border-border-secondary rounded-prism-200 p-s-500 font-mono text-small leading-relaxed overflow-x-auto;
+    background-color: var(--surface-default-secondary);
+    color: var(--text-default-body);
   }
 
   /* Feature grid */
   .feature-grid {
-    @apply grid gap-4;
+    @apply grid gap-s-400;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   }
 
   /* Audience split */
   .audience-split {
-    @apply grid gap-4 grid-cols-1 md:grid-cols-2;
+    @apply grid gap-s-400 grid-cols-1 md:grid-cols-2;
   }
 
   /* Stat display */
   .stat-value {
-    @apply text-4xl font-semibold tracking-tight text-ink;
+    @apply text-h4 font-semibold tracking-tight;
+    color: var(--text-default-heading);
   }
   .stat-label {
-    @apply text-sm text-ash mt-1;
+    @apply text-small mt-s-100;
+    color: var(--text-default-caption);
   }
 
   /* Nav */
   .nav-link {
-    @apply text-sm text-ash hover:text-ink transition-colors duration-150;
+    @apply text-small;
+    color: var(--text-default-body);
+  }
+  .nav-link:hover {
+    color: var(--text-default-heading);
   }
 
   /* Form elements */
   .form-input {
-    @apply w-full bg-surface border border-wire rounded-md px-4 py-3 text-base text-ink placeholder-smoke focus:outline-none focus:border-accent transition-colors duration-150;
+    @apply w-full border border-border-secondary rounded-prism-200 px-s-400 py-s-300 text-body;
+    background-color: var(--surface-default);
+    color: var(--text-default-heading);
+  }
+  .form-input::placeholder {
+    color: var(--text-default-placeholder);
+  }
+  .form-input:focus {
+    @apply outline-none;
+    border-color: var(--border-primary-focus);
+    box-shadow: 0 0 0 3px rgba(236, 78, 11, 0.15);
   }
 
   .form-label {
-    @apply block text-sm text-ash mb-2;
+    @apply block text-small mb-s-200;
+    color: var(--text-default-body);
   }
 
   select.form-input {

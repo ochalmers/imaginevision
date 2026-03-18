@@ -21,7 +21,7 @@ export default function AboutPage() {
         tag="Origin"
         title="Where we started."
       >
-        <div className="mx-auto max-w-prose space-y-6 text-ash leading-relaxed">
+        <div className="mx-auto max-w-prose space-y-6 text-text-body leading-relaxed">
           <p>
             The founders spent time inside brands selling configurable physical products and kept encountering the same problem. The products were sophisticated. The online experience for configuring and purchasing them was not. Customers were committing to a sofa in a specific fabric based on a photograph that may not have shown the fabric they selected.
           </p>
@@ -45,8 +45,8 @@ export default function AboutPage() {
             { title: 'Infrastructure for commerce', desc: 'Imagine adds the configurable product layer your platform was never designed to handle.' },
           ].map((item) => (
             <div key={item.title} className="card">
-              <h3 className="font-semibold text-ink">{item.title}</h3>
-              <p className="mt-2 text-sm text-ash">{item.desc}</p>
+              <h3 className="font-semibold text-text-heading">{item.title}</h3>
+              <p className="mt-2 text-sm text-text-body">{item.desc}</p>
             </div>
           ))}
         </div>
@@ -64,8 +64,8 @@ export default function AboutPage() {
             { title: 'Ship with intent', desc: 'We ship when things are ready. Every change is a commitment to customers running integrations on top.' },
           ].map((item) => (
             <div key={item.title}>
-              <h3 className="font-semibold text-ink">{item.title}</h3>
-              <p className="mt-2 text-ash">{item.desc}</p>
+              <h3 className="font-semibold text-text-heading">{item.title}</h3>
+              <p className="mt-2 text-text-body">{item.desc}</p>
             </div>
           ))}
         </div>

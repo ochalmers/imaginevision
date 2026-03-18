@@ -1,0 +1,258 @@
+/**
+ * Prism Design System — Token Implementation
+ * Source: prism-token-structure.md
+ * Figma: https://www.figma.com/design/kiwttYrNajH3hQwrtGtrle/Prism-Design-System
+ * Version: 1.0 by imagine.io
+ */
+
+:root {
+  /* ─── Collection 1: Brand (Primitives) ────────────────────────── */
+  --papaya-100: #fbdcce;
+  --papaya-200: #f7b89d;
+  --papaya-300: #f4956d;
+  --papaya-400: #f0713c;
+  --papaya-500: #ec4e0b;
+  --papaya-600: #bd3e09;
+  --papaya-700: #8e2f07;
+  --papaya-800: #5e1f04;
+  --papaya-900: #2f1002;
+
+  --green-100: #ccf0db;
+  --green-200: #99e2b7;
+  --green-300: #66d394;
+  --green-400: #33c570;
+  --green-500: #00b64c;
+  --green-600: #00923d;
+  --green-700: #006d2e;
+  --green-800: #00491e;
+  --green-900: #00240f;
+
+  --red-100: #fbced7;
+  --red-200: #f79daf;
+  --red-300: #f46d88;
+  --red-400: #f03c60;
+  --red-500: #ec0b38;
+  --red-600: #bd092d;
+  --red-700: #8e0722;
+  --red-800: #5e0416;
+  --red-900: #2f020b;
+
+  --blue-100: #ceeefb;
+  --blue-200: #9ddcf7;
+  --blue-300: #6dcbf4;
+  --blue-400: #3cb9f0;
+  --blue-500: #0ba8ec;
+  --blue-600: #0986bd;
+  --blue-700: #07658e;
+  --blue-800: #04435e;
+  --blue-900: #02222f;
+
+  --yellow-100: #fbf2ce;
+  --yellow-200: #f7e59d;
+  --yellow-300: #f4d96d;
+  --yellow-400: #f0cc3c;
+  --yellow-500: #ecbf0b;
+  --yellow-600: #bd9909;
+  --yellow-700: #8e7307;
+  --yellow-800: #5e4c04;
+  --yellow-900: #2f2602;
+
+  --grey-50: #f6f6f6;
+  --grey-100: #e5e5e5;
+  --grey-200: #cccccc;
+  --grey-300: #b2b2b2;
+  --grey-400: #999999;
+  --grey-500: #7f7f7f;
+  --grey-600: #666666;
+  --grey-700: #4d4d4d;
+  --grey-800: #333333;
+  --grey-900: #1a1a1a;
+
+  --white: #ffffff;
+  --dark: #141414;
+
+  /* ─── Collection 2: Alias (Semantic Tokens) ───────────────────── */
+  --text-default-heading: var(--grey-900);
+  --text-default-body: var(--grey-700);
+  --text-default-caption: var(--grey-700);
+  --text-default-placeholder: var(--grey-500);
+  --text-on-color-heading: var(--white);
+  --text-on-color-body: var(--white);
+  --text-on-color-caption: var(--grey-50);
+  --text-on-color-placeholder: var(--grey-50);
+  --text-primary-default: var(--papaya-500);
+  --text-primary-default-hover: var(--papaya-600);
+  --text-primary-on-color: var(--white);
+  --text-error-default: var(--red-500);
+  --text-error-default-hover: var(--red-600);
+  --text-error-on-color: var(--white);
+  --text-information-default: var(--blue-500);
+  --text-information-default-hover: var(--blue-600);
+  --text-information-on-color: var(--white);
+  --text-warning-default: var(--yellow-500);
+  --text-warning-default-hover: var(--yellow-600);
+  --text-warning-on-color: var(--white);
+  --text-success-default: var(--green-500);
+  --text-success-default-hover: var(--green-600);
+  --text-success-on-color: var(--white);
+  --text-disabled-default: var(--grey-400);
+  --text-disabled-on-color: var(--grey-500);
+
+  --surface-default: var(--white);
+  --surface-page: var(--white);
+  --surface-page-secondary: var(--grey-50);
+  --surface-default-secondary: var(--grey-50);
+  --surface-primary-default: var(--papaya-500);
+  --surface-primary-default-hover: var(--papaya-600);
+  --surface-primary-default-subtle: var(--papaya-100);
+  --surface-primary-default-subtle-hover: var(--papaya-200);
+  --surface-error-default: var(--red-500);
+  --surface-error-default-hover: var(--red-600);
+  --surface-error-default-subtle: var(--red-100);
+  --surface-error-default-subtle-hover: var(--red-200);
+  --surface-information-default: var(--blue-500);
+  --surface-information-default-hover: var(--blue-600);
+  --surface-information-default-subtle: var(--blue-100);
+  --surface-information-default-subtle-hover: var(--blue-200);
+  --surface-warning-default: var(--yellow-500);
+  --surface-warning-default-hover: var(--yellow-600);
+  --surface-warning-default-subtle: var(--yellow-100);
+  --surface-warning-default-subtle-hover: var(--yellow-200);
+  --surface-success-default: var(--green-500);
+  --surface-success-default-hover: var(--green-600);
+  --surface-success-default-subtle: var(--green-100);
+  --surface-success-default-subtle-hover: var(--green-200);
+  --surface-disabled-disabled: var(--grey-200);
+
+  --border-default: var(--grey-50);
+  --border-default-secondary: var(--grey-100);
+  --border-primary-default: var(--papaya-500);
+  --border-primary-default-hover: var(--papaya-600);
+  --border-primary-default-subtle: var(--papaya-100);
+  --border-primary-default-subtle-hover: var(--papaya-200);
+  --border-primary-focus: var(--papaya-500);
+  --border-error-default: var(--red-500);
+  --border-error-default-hover: var(--red-600);
+  --border-error-default-subtle: var(--red-100);
+  --border-error-default-subtle-hover: var(--red-200);
+  --border-error-focus: var(--red-500);
+  --border-information-default: var(--blue-500);
+  --border-information-default-hover: var(--blue-600);
+  --border-information-default-subtle: var(--blue-100);
+  --border-information-default-subtle-hover: var(--blue-200);
+  --border-information-focus: var(--blue-500);
+  --border-warning-default: var(--yellow-500);
+  --border-warning-default-hover: var(--yellow-600);
+  --border-warning-default-subtle: var(--yellow-100);
+  --border-warning-default-subtle-hover: var(--yellow-200);
+  --border-warning-focus: var(--yellow-500);
+  --border-success-default: var(--green-500);
+  --border-success-default-hover: var(--green-600);
+  --border-success-default-subtle: var(--green-100);
+  --border-success-default-subtle-hover: var(--green-200);
+  --border-success-focus: var(--green-500);
+  --border-disabled-disabled: var(--grey-200);
+
+  --icons-primary-default: var(--papaya-500);
+  --icons-primary-default-hover: var(--papaya-600);
+  --icons-primary-on-color: var(--white);
+  --icons-primary-on-color-hover: var(--white);
+  --icons-error-default: var(--red-500);
+  --icons-error-default-hover: var(--red-600);
+  --icons-error-on-color: var(--white);
+  --icons-information-default: var(--blue-500);
+  --icons-information-default-hover: var(--blue-600);
+  --icons-information-on-color: var(--white);
+  --icons-warning-default: var(--yellow-500);
+  --icons-warning-default-hover: var(--yellow-600);
+  --icons-warning-on-color: var(--white);
+  --icons-success-default: var(--green-500);
+  --icons-success-default-hover: var(--green-600);
+  --icons-success-on-color: var(--white);
+  --icons-disabled-default: var(--grey-400);
+  --icons-disabled-on-color: var(--grey-500);
+
+  /* ─── Collection 4: Scale (Spacing) ───────────────────────────── */
+  --s-100: 4px;
+  --s-200: 8px;
+  --s-300: 12px;
+  --s-400: 16px;
+  --s-500: 20px;
+  --s-600: 24px;
+  --s-700: 28px;
+  --s-800: 32px;
+  --s-900: 36px;
+  --s-1000: 40px;
+  --s-1100: 48px;
+  --s-1200: 56px;
+  --s-1300: 64px;
+  --s-1400: 72px;
+
+  /* ─── Collection 5: Border ────────────────────────────────────── */
+  --bw-25: 1px;
+  --bw-100: 4px;
+  --br-100: 4px;
+  --br-200: 8px;
+
+  /* ─── Typography (Responsive: Desktop default) ─────────────────── */
+  --font-primary: var(--font-pp, 'PP Neue Montreal'), system-ui, -apple-system, sans-serif;
+
+  /* H1: 60/72 -2px */
+  --h1-size: 60px;
+  --h1-lh: 72px;
+  --h1-ls: -2px;
+  /* H2: 48/56 -2px */
+  --h2-size: 48px;
+  --h2-lh: 56px;
+  --h2-ls: -2px;
+  /* H3: 40/48 -1px */
+  --h3-size: 40px;
+  --h3-lh: 48px;
+  --h3-ls: -1px;
+  /* H4: 32/40 -1px */
+  --h4-size: 32px;
+  --h4-lh: 40px;
+  --h4-ls: -1px;
+  /* H5: 24/28 -0.12px */
+  --h5-size: 24px;
+  --h5-lh: 28px;
+  --h5-ls: -0.12px;
+  /* H6: 20/24 0 */
+  --h6-size: 20px;
+  --h6-lh: 24px;
+  --h6-ls: 0;
+  /* body-lg: 20/24 0 */
+  --body-lg-size: 20px;
+  --body-lg-lh: 24px;
+  /* body: 16/20 0 */
+  --body-size: 16px;
+  --body-lh: 20px;
+  /* small: 14/16 1px */
+  --small-size: 14px;
+  --small-lh: 16px;
+  --small-ls: 1px;
+  /* caption: 12/16 2px */
+  --caption-size: 12px;
+  --caption-lh: 16px;
+  --caption-ls: 2px;
+
+  /* Layout */
+  --max-w-content: 1200px;
+  --max-w-prose: 960px;
+  --max-w-narrow: 720px;
+  --max-w-slim: 560px;
+}
+
+/* Responsive typography: Mobile (≤440px) */
+@media (max-width: 440px) {
+  :root {
+    --h1-size: 48px;
+    --h1-lh: 56px;
+    --h2-size: 40px;
+    --h2-lh: 48px;
+    --h3-size: 32px;
+    --h3-lh: 40px;
+    --h4-size: 28px;
+    --h4-lh: 32px;
+  }
+}

@@ -25,7 +25,7 @@ export default function CareersPage() {
         subtitle="Imagine is building the infrastructure for configurable commerce. We are early, intentional, and hiring."
         primaryCta={{ href: '#roles', label: 'See open roles' }}
       >
-        <p className="mt-6 text-sm text-smoke">Fully remote · EU/US timezone friendly</p>
+        <p className="mt-6 text-sm text-text-placeholder">Fully remote · EU/US timezone friendly</p>
       </PageHero>
 
       <Section
@@ -39,8 +39,8 @@ export default function CareersPage() {
             { title: 'A team that works well and ships', desc: 'Small enough that every person\'s judgment shapes the product. Async by default, communicate in writing, high standard without high stress.' },
           ].map((item) => (
             <div key={item.title} className="card">
-              <h3 className="font-semibold text-ink">{item.title}</h3>
-              <p className="mt-2 text-sm text-ash">{item.desc}</p>
+              <h3 className="font-semibold text-text-heading">{item.title}</h3>
+              <p className="mt-2 text-sm text-text-body">{item.desc}</p>
             </div>
           ))}
         </div>
@@ -56,22 +56,22 @@ export default function CareersPage() {
             <Link
               key={role.title}
               href="#"
-              className="block rounded-lg border border-wire bg-surface p-6 transition-colors hover:border-surface-alt"
+              className="block rounded-lg border border-border-secondary bg-surface p-6 transition-colors hover:border-border-primary-subtle"
             >
               <div className="flex flex-col gap-2 md:flex-row md:items-center md:justify-between">
                 <div>
-                  <h3 className="font-semibold text-ink">{role.title}</h3>
-                  <p className="mt-1 text-sm text-ash">{role.team} · {role.location}</p>
+                  <h3 className="font-semibold text-text-heading">{role.title}</h3>
+                  <p className="mt-1 text-sm text-text-body">{role.team} · {role.location}</p>
                 </div>
-                <span className="text-sm text-accent">View role →</span>
+                <span className="text-sm text-text-primary">View role →</span>
               </div>
             </Link>
           ))}
         </div>
         <div className="mt-12 card">
-          <h3 className="font-semibold text-ink">Open Application</h3>
-          <p className="mt-2 text-sm text-ash">Not listed above but think you belong here?</p>
-          <Link href="/contact" className="mt-4 inline-block text-accent hover:underline">Send an open application →</Link>
+          <h3 className="font-semibold text-text-heading">Open Application</h3>
+          <p className="mt-2 text-sm text-text-body">Not listed above but think you belong here?</p>
+          <Link href="/contact" className="mt-4 inline-block text-text-primary hover:underline">Send an open application →</Link>
         </div>
       </Section>
 
@@ -86,8 +86,8 @@ export default function CareersPage() {
             'Direct feedback, no politics — honest feedback expected',
             'Time to think — protect time for deep work',
           ].map((item) => (
-            <div key={item} className="rounded-lg border border-wire bg-surface px-4 py-3">
-              <p className="text-sm text-ash">{item}</p>
+            <div key={item} className="rounded-lg border border-border-secondary bg-surface px-4 py-3">
+              <p className="text-sm text-text-body">{item}</p>
             </div>
           ))}
         </div>

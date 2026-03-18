@@ -26,9 +26,9 @@ export default function ProductUpdatesPage() {
       <Section>
         <div className="mt-12 space-y-8">
           {updates.map((update) => (
-            <div key={update.title} className="border-b border-wire pb-8 last:border-0">
-              <h3 className="text-lg font-semibold text-ink">{update.title}</h3>
-              <p className="mt-2 text-sm text-smoke">{update.date}</p>
+            <div key={update.title} className="border-b border-border-secondary pb-8 last:border-0">
+              <h3 className="text-lg font-semibold text-text-heading">{update.title}</h3>
+              <p className="mt-2 text-sm text-text-placeholder">{update.date}</p>
             </div>
           ))}
         </div>

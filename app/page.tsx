@@ -15,7 +15,7 @@ export default function HomePage() {
         primaryCta={{ href: '/contact', label: 'Request a demo' }}
         secondaryCta={{ href: '/developers', label: 'Get API access' }}
       >
-        <p className="mt-6 text-sm text-smoke">
+        <p className="mt-s-600 text-small text-text-placeholder">
           Trusted by leading furniture, appliance, and consumer brands
         </p>
         <div className="mt-12">
@@ -29,25 +29,25 @@ export default function HomePage() {
       >
         <div className="feature-grid mt-12">
           <div className="card">
-            <h3 className="text-lg font-semibold text-ink">Asset Production</h3>
-            <p className="mt-2 text-sm text-ash">
+            <h3 className="text-h5 font-semibold text-text-heading">Asset Production</h3>
+            <p className="mt-s-200 text-small text-text-body">
               Thousands of pre-rendered images. Weeks to produce. Months to keep current. Every new variant means a new photoshoot.
             </p>
           </div>
           <div className="card">
-            <h3 className="text-lg font-semibold text-ink">Configuration Logic</h3>
-            <p className="mt-2 text-sm text-ash">
+            <h3 className="text-h5 font-semibold text-text-heading">Configuration Logic</h3>
+            <p className="mt-s-200 text-small text-text-body">
               Rules in spreadsheets. Options managed manually. Invalid configurations caught at order time, not at browse time.
             </p>
           </div>
           <div className="card">
-            <h3 className="text-lg font-semibold text-ink">Fragmented Tooling</h3>
-            <p className="mt-2 text-sm text-ash">
+            <h3 className="text-h5 font-semibold text-text-heading">Fragmented Tooling</h3>
+            <p className="mt-s-200 text-small text-text-body">
               A visualisation tool here. A configurator there. A commerce platform that doesn't talk to either. Four integrations held together with custom code.
             </p>
           </div>
         </div>
-        <p className="mt-12 text-center text-lg font-medium text-ink">
+        <p className="mt-s-1200 text-center text-body-lg font-medium text-text-heading">
           There is a better model.
         </p>
       </Section>
@@ -103,12 +103,12 @@ export default function HomePage() {
             <p className="stat-label">From contract to live</p>
           </div>
         </div>
-        <blockquote className="mx-auto mt-12 max-w-2xl border-l-2 border-accent pl-6 text-lg italic text-ash">
+        <blockquote className="mx-auto mt-s-1200 max-w-2xl border-l-2 border-border-primary pl-s-600 text-body-lg italic text-text-body">
           "Imagine replaced a five-person asset production workflow. We now launch new variants in hours."
         </blockquote>
-        <p className="mt-4 text-center text-sm text-smoke">— Head of Digital, Furniture brand</p>
-        <p className="mt-8 text-center">
-          <Link href="/case-studies" className="text-accent hover:underline">Read the case study</Link>
+        <p className="mt-s-400 text-center text-small text-text-placeholder">— Head of Digital, Furniture brand</p>
+        <p className="mt-s-800 text-center">
+          <Link href="/case-studies" className="text-text-primary hover:underline">Read the case study</Link>
         </p>
       </Section>
 
@@ -119,8 +119,8 @@ export default function HomePage() {
         <div className="audience-split mt-12">
           <div className="card">
             <p className="section-tag mb-2">For companies</p>
-            <h3 className="text-xl font-semibold text-ink">Sell your configurable products better.</h3>
-            <p className="mt-3 text-sm text-ash">
+            <h3 className="text-h5 font-semibold text-text-heading">Sell your configurable products better.</h3>
+            <p className="mt-s-300 text-small text-text-body">
               Whether you're selling furniture, appliances, or anything that comes in options — Imagine powers the product experience from configuration to checkout.
             </p>
             <div className="mt-6 flex gap-3">
@@ -130,8 +130,8 @@ export default function HomePage() {
           </div>
           <div className="card">
             <p className="section-tag mb-2">For developers</p>
-            <h3 className="text-xl font-semibold text-ink">Build on the configurable commerce platform.</h3>
-            <p className="mt-3 text-sm text-ash">
+            <h3 className="text-h5 font-semibold text-text-heading">Build on the configurable commerce platform.</h3>
+            <p className="mt-s-300 text-small text-text-body">
               A programmable API, JavaScript SDK, and full documentation set. Build product configurators, visual product pages, and custom experiences.
             </p>
             <div className="mt-6 flex gap-3">

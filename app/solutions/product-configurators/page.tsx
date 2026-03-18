@@ -35,8 +35,8 @@ export default function ProductConfiguratorsPage() {
             'Contextual placement — room scenes update with configuration',
             'Checkout integration — exact configuration to cart and OMS',
           ].map((item) => (
-            <div key={item} className="rounded-lg border border-wire bg-surface px-4 py-3">
-              <p className="text-sm text-ash">{item}</p>
+            <div key={item} className="rounded-lg border border-border-secondary bg-surface px-4 py-3">
+              <p className="text-sm text-text-body">{item}</p>
             </div>
           ))}
         </div>

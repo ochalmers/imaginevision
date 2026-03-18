@@ -22,7 +22,7 @@ export default function PlatformProductSystemsPage() {
       <Section
         title="A configurable product is more than a SKU."
       >
-        <div className="mx-auto mt-12 max-w-prose space-y-4 text-ash">
+        <div className="mx-auto mt-12 max-w-prose space-y-4 text-text-body">
           <p>
             A configurable physical product is an interconnected system of options, materials, constraints, and valid states. Imagine models it that way: Product, Attributes, Variants, Materials, Rules, Components.
           </p>

@@ -27,7 +27,7 @@ export default function VisualProductPagesPage() {
         tag="The Problem"
         title="Photo production doesn't scale with your catalogue."
       >
-        <div className="mx-auto mt-12 max-w-prose text-ash">
+        <div className="mx-auto mt-12 max-w-prose text-text-body">
           <p>Every new colourway needs a photographer, a studio, a sample, a stylist, and weeks of lead time. Meanwhile, buyers see grey placeholders where the navy finish should be.</p>
         </div>
       </Section>
@@ -42,7 +42,7 @@ export default function VisualProductPagesPage() {
             'Deliver to your storefront — images via API or direct integration',
           ].map((step) => (
             <div key={step} className="card">
-              <p className="text-sm text-ash">{step}</p>
+              <p className="text-sm text-text-body">{step}</p>
             </div>
           ))}
         </div>

@@ -30,8 +30,8 @@ export default function LightingPage() {
             { title: 'Warmth and colour temperature', desc: '2700K and 4000K are different. Static photography captures one. Buyers make the wrong choice.' },
           ].map((item) => (
             <div key={item.title} className="card">
-              <h3 className="font-semibold text-ink">{item.title}</h3>
-              <p className="mt-2 text-sm text-ash">{item.desc}</p>
+              <h3 className="font-semibold text-text-heading">{item.title}</h3>
+              <p className="mt-2 text-sm text-text-body">{item.desc}</p>
             </div>
           ))}
         </div>
@@ -48,8 +48,8 @@ export default function LightingPage() {
             { title: 'Specification sheet generation', desc: 'Generate trade-ready spec documents from any saved configuration — rendered context, dimensions, finish, electrical spec.' },
           ].map((item) => (
             <div key={item.title} className="card">
-              <h3 className="font-semibold text-ink">{item.title}</h3>
-              <p className="mt-2 text-sm text-ash">{item.desc}</p>
+              <h3 className="font-semibold text-text-heading">{item.title}</h3>
+              <p className="mt-2 text-sm text-text-body">{item.desc}</p>
             </div>
           ))}
         </div>

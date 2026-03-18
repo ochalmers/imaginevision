@@ -24,9 +24,9 @@ export default function ResourcesPage() {
           ].map((item) => (
             <Link key={item.title} href="#" className="card block">
               <span className="section-tag">{item.type}</span>
-              <h3 className="mt-2 text-lg font-semibold text-ink">{item.title}</h3>
-              <p className="mt-2 text-sm text-ash">{item.desc}</p>
-              <p className="mt-4 text-xs text-smoke">{item.time} read</p>
+              <h3 className="mt-2 text-lg font-semibold text-text-heading">{item.title}</h3>
+              <p className="mt-2 text-sm text-text-body">{item.desc}</p>
+              <p className="mt-4 text-xs text-text-placeholder">{item.time} read</p>
             </Link>
           ))}
         </div>
@@ -37,24 +37,24 @@ export default function ResourcesPage() {
       >
         <div className="mt-12 grid gap-6 sm:grid-cols-2">
           <div className="card">
-            <h3 className="font-semibold text-ink">Blog</h3>
-            <p className="mt-2 text-sm text-ash">Strategy, product thinking, and category analysis.</p>
-            <Link href="/blog" className="mt-4 inline-block text-sm text-accent">View all posts →</Link>
+            <h3 className="font-semibold text-text-heading">Blog</h3>
+            <p className="mt-2 text-sm text-text-body">Strategy, product thinking, and category analysis.</p>
+            <Link href="/blog" className="mt-4 inline-block text-sm text-text-primary">View all posts →</Link>
           </div>
           <div className="card">
-            <h3 className="font-semibold text-ink">Guides</h3>
-            <p className="mt-2 text-sm text-ash">Long-form educational content for brands and developers.</p>
-            <Link href="/guides" className="mt-4 inline-block text-sm text-accent">View all guides →</Link>
+            <h3 className="font-semibold text-text-heading">Guides</h3>
+            <p className="mt-2 text-sm text-text-body">Long-form educational content for brands and developers.</p>
+            <Link href="/guides" className="mt-4 inline-block text-sm text-text-primary">View all guides →</Link>
           </div>
           <div className="card">
-            <h3 className="font-semibold text-ink">Case Studies</h3>
-            <p className="mt-2 text-sm text-ash">Commercial outcomes from brands that have built on Imagine.</p>
-            <Link href="/case-studies" className="mt-4 inline-block text-sm text-accent">View all case studies →</Link>
+            <h3 className="font-semibold text-text-heading">Case Studies</h3>
+            <p className="mt-2 text-sm text-text-body">Commercial outcomes from brands that have built on Imagine.</p>
+            <Link href="/case-studies" className="mt-4 inline-block text-sm text-text-primary">View all case studies →</Link>
           </div>
           <div className="card">
-            <h3 className="font-semibold text-ink">Product Updates</h3>
-            <p className="mt-2 text-sm text-ash">What the Imagine team has shipped — API, rendering, SDK.</p>
-            <Link href="/product-updates" className="mt-4 inline-block text-sm text-accent">View all updates →</Link>
+            <h3 className="font-semibold text-text-heading">Product Updates</h3>
+            <p className="mt-2 text-sm text-text-body">What the Imagine team has shipped — API, rendering, SDK.</p>
+            <Link href="/product-updates" className="mt-4 inline-block text-sm text-text-primary">View all updates →</Link>
           </div>
         </div>
       </Section>
@@ -74,7 +74,7 @@ export default function ResourcesPage() {
             Subscribe
           </button>
         </form>
-        <p className="mt-4 text-center text-sm text-smoke">Joined by 3,400+ ecommerce and engineering professionals.</p>
+        <p className="mt-4 text-center text-sm text-text-placeholder">Joined by 3,400+ ecommerce and engineering professionals.</p>
       </Section>
     </>
   )

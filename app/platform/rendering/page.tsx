@@ -27,10 +27,10 @@ export default function PlatformRenderingPage() {
         title="A rendering engine designed for commerce — not studios."
       >
         <div className="mx-auto mt-12 max-w-prose">
-          <p className="text-ash leading-relaxed">
+          <p className="text-text-body leading-relaxed">
             Traditional product photography breaks down the moment you add configurability. A sofa with 12 fabric options, 4 leg finishes, and 3 sizes means 144 SKUs — and tens of thousands of dollars in photography and retouching before you've launched.
           </p>
-          <p className="mt-6 text-ash">
+          <p className="mt-6 text-text-body">
             Imagine's rendering engine works from your structured product data and material libraries. Define a configuration state — fabric, finish, dimensions, components — and Imagine returns a production-quality image.
           </p>
         </div>
@@ -50,8 +50,8 @@ export default function PlatformRenderingPage() {
           ].map((step) => (
             <div key={step.n} className="card">
               <span className="section-tag">{step.n}</span>
-              <h3 className="mt-2 text-lg font-semibold text-ink">{step.title}</h3>
-              <p className="mt-2 text-sm text-ash">{step.desc}</p>
+              <h3 className="mt-2 text-lg font-semibold text-text-heading">{step.title}</h3>
+              <p className="mt-2 text-sm text-text-body">{step.desc}</p>
             </div>
           ))}
         </div>
@@ -62,8 +62,8 @@ export default function PlatformRenderingPage() {
       >
         <div className="mt-12 grid gap-4 sm:grid-cols-2 md:grid-cols-3">
           {['PDP hero images', 'Transparent PNGs', 'Lifestyle composites', 'Shadow-only renders', 'Thumbnail variants'].map((item) => (
-            <div key={item} className="rounded-lg border border-wire bg-surface px-4 py-3">
-              <p className="font-medium text-ink">{item}</p>
+            <div key={item} className="rounded-lg border border-border-secondary bg-surface px-4 py-3">
+              <p className="font-medium text-text-heading">{item}</p>
             </div>
           ))}
         </div>

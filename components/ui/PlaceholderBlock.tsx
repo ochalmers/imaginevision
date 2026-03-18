@@ -9,9 +9,9 @@ export default function PlaceholderBlock({
 }: PlaceholderBlockProps) {
   return (
     <div
-      className={`flex aspect-video items-center justify-center rounded-lg border border-wire bg-surface-alt text-smoke ${className}`}
+      className={`flex aspect-video items-center justify-center rounded-prism-200 border border-border-secondary bg-surface-default-secondary text-text-placeholder ${className}`}
     >
-      <span className="text-center text-sm">{label}</span>
+      <span className="text-center text-small">{label}</span>
     </div>
   )
 }

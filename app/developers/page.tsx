@@ -70,20 +70,20 @@ console.log(result.imageUrl);`}
       >
         <div className="mx-auto mt-12 max-w-2xl space-y-6">
           <div>
-            <h3 className="font-semibold text-ink">1. Get your API key</h3>
-            <p className="mt-1 text-sm text-ash">Sign up and generate a key. No credit card required.</p>
+            <h3 className="font-semibold text-text-heading">1. Get your API key</h3>
+            <p className="mt-1 text-sm text-text-body">Sign up and generate a key. No credit card required.</p>
           </div>
           <div>
-            <h3 className="font-semibold text-ink">2. Install the SDK</h3>
+            <h3 className="font-semibold text-text-heading">2. Install the SDK</h3>
             <CodeBlock code="npm install @imagine/sdk" language="bash" />
           </div>
           <div>
-            <h3 className="font-semibold text-ink">3. Embed the configurator</h3>
-            <p className="mt-1 text-sm text-ash">Drop the React component into your product page. Point it at a product ID.</p>
+            <h3 className="font-semibold text-text-heading">3. Embed the configurator</h3>
+            <p className="mt-1 text-sm text-text-body">Drop the React component into your product page. Point it at a product ID.</p>
           </div>
         </div>
         <p className="mt-8 text-center">
-          <Link href="/developers/docs" className="text-accent hover:underline">Start the quickstart guide →</Link>
+          <Link href="/developers/docs" className="text-text-primary hover:underline">Start the quickstart guide →</Link>
         </p>
       </Section>
 
@@ -91,12 +91,12 @@ console.log(result.imageUrl);`}
         tag="Use cases"
         title="Built for every commerce context."
       >
-        <p className="mx-auto max-w-prose text-center text-ash">
+        <p className="mx-auto max-w-prose text-center text-text-body">
           Product configurator · Visual PDP · Batch render pipeline · Specification tool · Showroom kiosk · B2B quoting UI
         </p>
         <div className="mt-8 flex flex-wrap justify-center gap-2">
           {['Product configurator', 'Visual PDP', 'Batch render', 'Spec tool', 'Showroom kiosk', 'B2B quoting'].map((tag) => (
-            <span key={tag} className="rounded-full border border-wire px-3 py-1 text-xs text-ash">{tag}</span>
+            <span key={tag} className="rounded-full border border-border-secondary px-3 py-1 text-xs text-text-body">{tag}</span>
           ))}
         </div>
       </Section>
@@ -105,11 +105,11 @@ console.log(result.imageUrl);`}
         tag="Community"
         title="Built in the open. Supported in public."
       >
-        <div className="mt-12 flex flex-wrap justify-center gap-6 text-ash">
-          <a href="https://github.com" className="hover:text-ink">GitHub</a>
-          <a href="#" className="hover:text-ink">Discord</a>
-          <Link href="/product-updates" className="hover:text-ink">Changelog</Link>
-          <a href="#" className="hover:text-ink">Status</a>
+        <div className="mt-12 flex flex-wrap justify-center gap-6 text-text-body">
+          <a href="https://github.com" className="hover:text-text-heading">GitHub</a>
+          <a href="#" className="hover:text-text-heading">Discord</a>
+          <Link href="/product-updates" className="hover:text-text-heading">Changelog</Link>
+          <a href="#" className="hover:text-text-heading">Status</a>
         </div>
       </Section>
 

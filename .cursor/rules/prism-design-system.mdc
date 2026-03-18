@@ -1,0 +1,30 @@
+---
+description: Prism Design System — reference for all styling decisions
+globs: ["**/*.tsx", "**/*.ts", "**/*.css"]
+---
+
+# Prism Design System
+
+**Design system reference:** `prism-token-structure.md` in project root.
+
+Use this document as the single source of truth for colors, typography, spacing, and component styling.
+
+## Key principles
+
+1. **Three-tier architecture:** Brand (primitives) → Alias (semantic) → Components
+2. **Prefer semantic tokens:** Use `text-text-heading`, `surface-primary`, `border-primary` etc. over raw primitives like `papaya-500`
+3. **Scale spacing:** Use `s-100` through `s-1400` (4px–72px) from Prism Scale collection
+4. **Typography:** Use `text-h1` through `text-h6`, `text-body-lg`, `text-body`, `text-small`, `text-caption`
+5. **Border radius:** `rounded-prism-100` (4px), `rounded-prism-200` (8px)
+
+## Token mappings
+
+- `text-ink` → `text-text-heading` or `text-text-body`
+- `text-ash` → `text-text-body`
+- `text-smoke` → `text-text-placeholder`
+- `text-accent` → `text-text-primary`
+- `bg-canvas` → `bg-surface-page`
+- `bg-raised` → `bg-surface-page-secondary`
+- `border-wire` → `border-border-secondary`
+- `bg-surface` → `bg-surface-default`
+- `bg-surface-alt` → `bg-surface-default-secondary`

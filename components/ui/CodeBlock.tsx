@@ -7,7 +7,7 @@ export default function CodeBlock({ code, language = 'javascript' }: CodeBlockPr
   return (
     <div className="code-block overflow-x-auto">
       {language && (
-        <span className="mb-2 block text-xs text-smoke">{language}</span>
+        <span className="mb-s-200 block text-caption text-text-placeholder">{language}</span>
       )}
       <pre className="m-0 text-sm">
         <code className="font-mono">{code}</code>

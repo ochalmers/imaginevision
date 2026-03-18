@@ -28,9 +28,9 @@ export default function CaseStudiesPage() {
           {studies.map((study) => (
             <div key={study.title} className="card">
               <span className="section-tag">{study.industry}</span>
-              <h3 className="mt-2 text-lg font-semibold text-ink">{study.title}</h3>
+              <h3 className="mt-2 text-lg font-semibold text-text-heading">{study.title}</h3>
               <p className="mt-4">
-                <Link href="#" className="text-accent hover:underline">Read the case study →</Link>
+                <Link href="#" className="text-text-primary hover:underline">Read the case study →</Link>
               </p>
             </div>
           ))}

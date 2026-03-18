@@ -24,11 +24,11 @@ export default function Hero({
       <div className="container">
         <div className="mx-auto max-w-prose text-center">
           {tag && <p className="section-tag mb-4">{tag}</p>}
-          <h1 className="text-4xl font-semibold leading-tight tracking-tight text-ink md:text-5xl">
+          <h1 className="text-h2 md:text-h1 font-semibold text-text-heading">
             {title}
           </h1>
           {subtitle && (
-            <p className="mt-5 text-lg leading-relaxed text-ash md:text-xl">
+            <p className="mt-s-500 text-body-lg text-text-body md:text-body-lg">
               {subtitle}
             </p>
           )}

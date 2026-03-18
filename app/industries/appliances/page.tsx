@@ -30,8 +30,8 @@ export default function AppliancesPage() {
             { title: 'Consistency across channels', desc: 'Imagery from multiple shoots degrades consistency. Imagine renders from the same source every time.' },
           ].map((item) => (
             <div key={item.title} className="card">
-              <h3 className="font-semibold text-ink">{item.title}</h3>
-              <p className="mt-2 text-sm text-ash">{item.desc}</p>
+              <h3 className="font-semibold text-text-heading">{item.title}</h3>
+              <p className="mt-2 text-sm text-text-body">{item.desc}</p>
             </div>
           ))}
         </div>
@@ -42,16 +42,16 @@ export default function AppliancesPage() {
       >
         <div className="mt-12 grid gap-6 md:grid-cols-3">
           <div className="card">
-            <h3 className="font-semibold text-ink">Instant colour variant rendering</h3>
-            <p className="mt-2 text-sm text-ash">Upload 3D models. Define colour library. Generate every colourway without a photoshoot. Time to live: 48–72 hours.</p>
+            <h3 className="font-semibold text-text-heading">Instant colour variant rendering</h3>
+            <p className="mt-2 text-sm text-text-body">Upload 3D models. Define colour library. Generate every colourway without a photoshoot. Time to live: 48–72 hours.</p>
           </div>
           <div className="card">
-            <h3 className="font-semibold text-ink">New colourway launch pipeline</h3>
-            <p className="mt-2 text-sm text-ash">Approved colourway → full asset set generated → DTC, retail feeds, trade catalogue updated simultaneously.</p>
+            <h3 className="font-semibold text-text-heading">New colourway launch pipeline</h3>
+            <p className="mt-2 text-sm text-text-body">Approved colourway → full asset set generated → DTC, retail feeds, trade catalogue updated simultaneously.</p>
           </div>
           <div className="card">
-            <h3 className="font-semibold text-ink">Automated retail partner distribution</h3>
-            <p className="mt-2 text-sm text-ash">Format, name, and deliver assets to each partner according to their requirements. Automatically.</p>
+            <h3 className="font-semibold text-text-heading">Automated retail partner distribution</h3>
+            <p className="mt-2 text-sm text-text-body">Format, name, and deliver assets to each partner according to their requirements. Automatically.</p>
           </div>
         </div>
       </Section>

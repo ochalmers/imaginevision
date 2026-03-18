@@ -26,23 +26,23 @@ export default function BlogPage() {
 
       <Section>
         <div className="mx-auto max-w-2xl">
-          <div className="border-b border-wire py-6">
+          <div className="border-b border-border-secondary py-6">
             <span className="section-tag">Featured</span>
-            <h2 className="mt-2 text-2xl font-semibold text-ink">
+            <h2 className="mt-2 text-2xl font-semibold text-text-heading">
               Why "Add to Cart" Is Not the End of the Configuration Problem
             </h2>
-            <p className="mt-2 text-ash">
+            <p className="mt-2 text-text-body">
               Most configurators solve the UI layer. The harder problems — constraint logic, render accuracy, order integrity — sit underneath. An argument for configuration as infrastructure.
             </p>
-            <p className="mt-4 text-sm text-smoke">Strategy · 6 min · March 2026</p>
+            <p className="mt-4 text-sm text-text-placeholder">Strategy · 6 min · March 2026</p>
           </div>
           <div className="divide-y divide-wire">
             {posts.slice(1).map((post) => (
               <Link key={post.title} href="#" className="block py-6 hover:opacity-80">
                 <span className="section-tag">{post.category}</span>
-                <h3 className="mt-2 text-lg font-semibold text-ink">{post.title}</h3>
-                <p className="mt-1 text-sm text-ash">{post.excerpt}</p>
-                <p className="mt-2 text-xs text-smoke">{post.time} · {post.date}</p>
+                <h3 className="mt-2 text-lg font-semibold text-text-heading">{post.title}</h3>
+                <p className="mt-1 text-sm text-text-body">{post.excerpt}</p>
+                <p className="mt-2 text-xs text-text-placeholder">{post.time} · {post.date}</p>
               </Link>
             ))}
           </div>

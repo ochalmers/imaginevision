@@ -25,13 +25,13 @@ export default function DevelopersDocsPage() {
       >
         <div className="mt-12 space-y-8">
           <div>
-            <h3 className="font-semibold text-ink">Step 1 — Install the SDK</h3>
+            <h3 className="font-semibold text-text-heading">Step 1 — Install the SDK</h3>
             <div className="mt-2">
               <CodeBlock code="npm install @imagine/sdk" language="bash" />
             </div>
           </div>
           <div>
-            <h3 className="font-semibold text-ink">Step 2 — Initialize and authenticate</h3>
+            <h3 className="font-semibold text-text-heading">Step 2 — Initialize and authenticate</h3>
             <div className="mt-2">
               <CodeBlock
                 code={`import { Imagine } from '@imagine/sdk';
@@ -43,7 +43,7 @@ const imagine = new Imagine({
             </div>
           </div>
           <div>
-            <h3 className="font-semibold text-ink">Step 3 — Make your first render call</h3>
+            <h3 className="font-semibold text-text-heading">Step 3 — Make your first render call</h3>
             <div className="mt-2">
               <CodeBlock
                 code={`const render = await imagine.render({
@@ -58,7 +58,7 @@ console.log(render.imageUrl);`}
           </div>
         </div>
         <p className="mt-8">
-          <Link href="#" className="text-accent hover:underline">Read the full quickstart guide →</Link>
+          <Link href="#" className="text-text-primary hover:underline">Read the full quickstart guide →</Link>
         </p>
       </Section>
 
@@ -83,13 +83,13 @@ console.log(render.imageUrl);`}
         tag="Changelog"
         title="What's changed."
       >
-        <div className="mt-12 space-y-2 text-sm text-ash">
+        <div className="mt-12 space-y-2 text-sm text-text-body">
           <p>• March 2026 — SDK v2.4.0: useImagineRender hook, improved TypeScript inference</p>
           <p>• February 2026 — API v1: /v1/experiences endpoint in general availability</p>
           <p>• January 2026 — Render engine: average time under 3.5 seconds</p>
         </div>
         <p className="mt-6">
-          <Link href="/product-updates" className="text-accent hover:underline">View changelog →</Link>
+          <Link href="/product-updates" className="text-text-primary hover:underline">View changelog →</Link>
         </p>
       </Section>
     </>

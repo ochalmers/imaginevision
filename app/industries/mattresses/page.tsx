@@ -30,8 +30,8 @@ export default function MattressesPage() {
             { title: 'Guided selling gap', desc: "Mattress buying requires guidance. Brands that provide it convert higher. Most don't, because building it has required significant engineering." },
           ].map((item) => (
             <div key={item.title} className="card">
-              <h3 className="font-semibold text-ink">{item.title}</h3>
-              <p className="mt-2 text-sm text-ash">{item.desc}</p>
+              <h3 className="font-semibold text-text-heading">{item.title}</h3>
+              <p className="mt-2 text-sm text-text-body">{item.desc}</p>
             </div>
           ))}
         </div>
@@ -42,16 +42,16 @@ export default function MattressesPage() {
       >
         <div className="mt-12 grid gap-6 md:grid-cols-3">
           <div className="card">
-            <h3 className="font-semibold text-ink">Visual product explanation</h3>
-            <p className="mt-2 text-sm text-ash">Rendered cross-sections with layer-by-layer accuracy. Buyers see what they're buying.</p>
+            <h3 className="font-semibold text-text-heading">Visual product explanation</h3>
+            <p className="mt-2 text-sm text-text-body">Rendered cross-sections with layer-by-layer accuracy. Buyers see what they're buying.</p>
           </div>
           <div className="card">
-            <h3 className="font-semibold text-ink">Real-time variant configuration</h3>
-            <p className="mt-2 text-sm text-ash">Size, height, firmness, cover — every combination rendered and delivered to PDP automatically.</p>
+            <h3 className="font-semibold text-text-heading">Real-time variant configuration</h3>
+            <p className="mt-2 text-sm text-text-body">Size, height, firmness, cover — every combination rendered and delivered to PDP automatically.</p>
           </div>
           <div className="card">
-            <h3 className="font-semibold text-ink">Guided selling experience</h3>
-            <p className="mt-2 text-sm text-ash">Question flow that adapts to sleeping position, firmness preference, partner considerations — surfaces the right configuration.</p>
+            <h3 className="font-semibold text-text-heading">Guided selling experience</h3>
+            <p className="mt-2 text-sm text-text-body">Question flow that adapts to sleeping position, firmness preference, partner considerations — surfaces the right configuration.</p>
           </div>
         </div>
       </Section>

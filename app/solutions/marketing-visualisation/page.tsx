@@ -29,8 +29,8 @@ export default function MarketingVisualisationPage() {
             { title: 'Seasonal & Promotional', desc: 'Holiday campaigns, sale banners — styled imagery on demand.' },
           ].map((item) => (
             <div key={item.title} className="card">
-              <h3 className="text-lg font-semibold text-ink">{item.title}</h3>
-              <p className="mt-2 text-sm text-ash">{item.desc}</p>
+              <h3 className="text-lg font-semibold text-text-heading">{item.title}</h3>
+              <p className="mt-2 text-sm text-text-body">{item.desc}</p>
             </div>
           ))}
         </div>

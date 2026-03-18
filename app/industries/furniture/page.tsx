@@ -30,8 +30,8 @@ export default function FurniturePage() {
             { title: 'COM and bespoke configuration', desc: 'Higher-end brands offer COM. Visualising custom configurations before production requires samples or guesswork.' },
           ].map((item) => (
             <div key={item.title} className="card">
-              <h3 className="font-semibold text-ink">{item.title}</h3>
-              <p className="mt-2 text-sm text-ash">{item.desc}</p>
+              <h3 className="font-semibold text-text-heading">{item.title}</h3>
+              <p className="mt-2 text-sm text-text-body">{item.desc}</p>
             </div>
           ))}
         </div>
@@ -42,16 +42,16 @@ export default function FurniturePage() {
       >
         <div className="mt-12 grid gap-6 md:grid-cols-3">
           <div className="card">
-            <h3 className="font-semibold text-ink">Automated variant imagery</h3>
-            <p className="mt-2 text-sm text-ash">Upload 3D models and materials. Imagine generates product imagery for every combination. When you add a fabric, imagery generates automatically.</p>
+            <h3 className="font-semibold text-text-heading">Automated variant imagery</h3>
+            <p className="mt-2 text-sm text-text-body">Upload 3D models and materials. Imagine generates product imagery for every combination. When you add a fabric, imagery generates automatically.</p>
           </div>
           <div className="card">
-            <h3 className="font-semibold text-ink">DTC configurator</h3>
-            <p className="mt-2 text-sm text-ash">Buyers configure frame, fabric, leg finish, dimensions — and see it rendered in real time. Valid state logic prevents impossible combinations.</p>
+            <h3 className="font-semibold text-text-heading">DTC configurator</h3>
+            <p className="mt-2 text-sm text-text-body">Buyers configure frame, fabric, leg finish, dimensions — and see it rendered in real time. Valid state logic prevents impossible combinations.</p>
           </div>
           <div className="card">
-            <h3 className="font-semibold text-ink">Wholesale catalogue automation</h3>
-            <p className="mt-2 text-sm text-ash">Live digital catalogue for wholesale partners — always current, always accurate. Partners access imagery and configure products.</p>
+            <h3 className="font-semibold text-text-heading">Wholesale catalogue automation</h3>
+            <p className="mt-2 text-sm text-text-body">Live digital catalogue for wholesale partners — always current, always accurate. Partners access imagery and configure products.</p>
           </div>
         </div>
       </Section>

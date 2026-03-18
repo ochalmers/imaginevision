@@ -1,8 +1,7 @@
 import type { Metadata } from 'next'
 import localFont from 'next/font/local'
 import './globals.css'
-import Nav from '@/components/layout/Nav'
-import Footer from '@/components/layout/Footer'
+import LayoutWrapper from '@/components/layout/LayoutWrapper'
 
 const ppNeue = localFont({
   src: [
@@ -54,9 +53,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={ppNeue.variable}>
       <body>
-        <Nav />
-        <main>{children}</main>
-        <Footer />
+        <LayoutWrapper>{children}</LayoutWrapper>
       </body>
     </html>
   )

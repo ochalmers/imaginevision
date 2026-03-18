@@ -54,14 +54,14 @@ export default function PlatformPage() {
         title="A platform built as a system."
       >
         <div className="mx-auto mt-12 max-w-3xl">
-          <p className="text-ash leading-relaxed">
-            A brand's product catalog lives in <strong className="text-ink">Product Systems</strong> — structured, programmable, versioned. 
-            The <strong className="text-ink">Configuration Engine</strong> reads those product definitions to validate what's possible in real time. 
-            The <strong className="text-ink">Rendering Engine</strong> takes any valid configuration state and returns a photorealistic image. 
-            <strong className="text-ink"> Experiences</strong> expose configuration and rendering through UI components — embeddable, brandable, conversion-optimized. 
-            The <strong className="text-ink">API</strong> surfaces all of this programmatically.
+          <p className="text-text-body leading-relaxed">
+            A brand's product catalog lives in <strong className="text-text-heading">Product Systems</strong> — structured, programmable, versioned. 
+            The <strong className="text-text-heading">Configuration Engine</strong> reads those product definitions to validate what's possible in real time. 
+            The <strong className="text-text-heading">Rendering Engine</strong> takes any valid configuration state and returns a photorealistic image. 
+            <strong className="text-text-heading"> Experiences</strong> expose configuration and rendering through UI components — embeddable, brandable, conversion-optimized. 
+            The <strong className="text-text-heading">API</strong> surfaces all of this programmatically.
           </p>
-          <p className="mt-6 text-ash">
+          <p className="mt-6 text-text-body">
             Most platforms solve one layer. Imagine is designed for the full stack of configurable commerce.
           </p>
         </div>
@@ -73,7 +73,7 @@ export default function PlatformPage() {
       >
         <div className="mt-12 grid gap-8 lg:grid-cols-2">
           <div>
-            <ul className="space-y-3 text-ash">
+            <ul className="space-y-3 text-text-body">
               <li>• RESTful API with predictable resource shapes and clear versioning</li>
               <li>• SDKs for JavaScript/TypeScript (React components, server-side rendering)</li>
               <li>• Webhooks for configuration events, render completions, catalog updates</li>

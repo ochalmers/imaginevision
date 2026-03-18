@@ -22,12 +22,12 @@ export default function Section({
           <div className="mx-auto mb-12 max-w-prose text-center">
             {tag && <p className="section-tag mb-4">{tag}</p>}
             {title && (
-              <h2 className="text-2xl font-semibold leading-snug tracking-tight text-ink md:text-3xl">
+              <h2 className="text-h4 md:text-h3 font-semibold text-text-heading">
                 {title}
               </h2>
             )}
             {subtitle && (
-              <p className="mt-4 text-base leading-relaxed text-ash md:text-lg">
+              <p className="mt-s-400 text-body text-text-body md:text-body-lg">
                 {subtitle}
               </p>
             )}

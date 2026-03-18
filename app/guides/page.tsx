@@ -26,9 +26,9 @@ export default function GuidesPage() {
         <div className="mt-12 space-y-8">
           {guides.map((guide) => (
             <Link key={guide.title} href="#" className="card block">
-              <h3 className="text-lg font-semibold text-ink">{guide.title}</h3>
-              <p className="mt-2 text-sm text-ash">{guide.desc}</p>
-              <p className="mt-4 text-xs text-smoke">{guide.time} read</p>
+              <h3 className="text-lg font-semibold text-text-heading">{guide.title}</h3>
+              <p className="mt-2 text-sm text-text-body">{guide.desc}</p>
+              <p className="mt-4 text-xs text-text-placeholder">{guide.time} read</p>
             </Link>
           ))}
         </div>

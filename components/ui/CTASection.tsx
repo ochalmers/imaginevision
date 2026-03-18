@@ -14,12 +14,12 @@ export default function CTASection({
   secondaryCta,
 }: CTASectionProps) {
   return (
-    <section className="section border-t border-wire bg-raised">
+    <section className="section border-t border-border-secondary bg-surface-page-secondary">
       <div className="container text-center">
-        <h2 className="text-2xl font-semibold tracking-tight text-ink md:text-3xl">
+        <h2 className="text-h4 md:text-h3 font-semibold text-text-heading">
           {title}
         </h2>
-        {subtitle && <p className="mx-auto mt-4 max-w-prose text-ash">{subtitle}</p>}
+        {subtitle && <p className="mx-auto mt-s-400 max-w-prose text-text-body">{subtitle}</p>}
         <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
           {primaryCta && (
             <Link href={primaryCta.href} className="btn btn-primary">

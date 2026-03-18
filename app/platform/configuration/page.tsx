@@ -24,7 +24,7 @@ export default function PlatformConfigurationPage() {
         title="Configurable products are harder than they look."
       >
         <div className="mx-auto mt-12 max-w-prose">
-          <p className="text-ash">
+          <p className="text-text-body">
             Most brands manage configuration logic in spreadsheets, hard-coded front-end rules, or customer service handling edge cases. Invalid configurations reach checkout. Rules live in too many places. Adding an option breaks everything.
           </p>
         </div>
@@ -40,8 +40,8 @@ export default function PlatformConfigurationPage() {
             'Conflict detection — incompatible selections surfaced before cart',
             'Multi-channel enforcement — same rules everywhere',
           ].map((item) => (
-            <div key={item} className="rounded-lg border border-wire bg-surface px-4 py-3">
-              <p className="text-sm text-ash">{item}</p>
+            <div key={item} className="rounded-lg border border-border-secondary bg-surface px-4 py-3">
+              <p className="text-sm text-text-body">{item}</p>
             </div>
           ))}
         </div>

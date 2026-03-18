@@ -46,12 +46,12 @@ const footerLinks = {
 
 export default function Footer() {
   return (
-    <footer className="border-t border-wire bg-raised">
+    <footer className="border-t border-border-secondary bg-surface-page-secondary">
       <div className="container section">
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6">
           {Object.entries(footerLinks).map(([group, links]) => (
             <div key={group}>
-              <h3 className="mb-4 text-xs font-semibold tracking-widest uppercase text-ash">
+              <h3 className="mb-s-400 text-caption font-semibold tracking-widest uppercase text-text-body">
                 {group}
               </h3>
               <ul className="space-y-2">
@@ -59,7 +59,7 @@ export default function Footer() {
                   <li key={link.href}>
                     <Link
                       href={link.href}
-                      className="text-sm text-ash hover:text-ink transition-colors"
+                      className="text-small text-text-body hover:text-text-heading transition-colors"
                     >
                       {link.label}
                     </Link>
@@ -69,13 +69,13 @@ export default function Footer() {
             </div>
           ))}
         </div>
-        <div className="mt-12 flex flex-col gap-4 border-t border-wire pt-8 md:flex-row md:items-center md:justify-between">
-          <p className="text-sm text-smoke">
+        <div className="mt-s-1200 flex flex-col gap-s-400 border-t border-border-secondary pt-s-800 md:flex-row md:items-center md:justify-between">
+          <p className="text-small text-text-placeholder">
             Imagine powers configurable commerce.
           </p>
-          <div className="flex gap-6 text-sm text-ash">
-            <a href="https://github.com" className="hover:text-ink transition-colors">GitHub</a>
-            <a href="https://linkedin.com" className="hover:text-ink transition-colors">LinkedIn</a>
+          <div className="flex gap-s-600 text-small text-text-body">
+            <a href="https://github.com" className="hover:text-text-heading transition-colors">GitHub</a>
+            <a href="https://linkedin.com" className="hover:text-text-heading transition-colors">LinkedIn</a>
           </div>
         </div>
       </div>

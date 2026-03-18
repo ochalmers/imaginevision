@@ -1,0 +1,13 @@
+/**
+ * Design system — global overrides for SaaS shell
+ * Use this in dashboard layout; marketing app keeps globals.css
+ */
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}

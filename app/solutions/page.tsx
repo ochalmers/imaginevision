@@ -49,7 +49,7 @@ export default function SolutionsPage() {
         subtitle="Imagine is purpose-built for furniture, mattresses, appliances, and lighting. Every solution is designed around the real complexity of your category."
       >
         <p className="mt-6 text-center">
-          <Link href="/industries" className="text-accent hover:underline">Explore by industry →</Link>
+          <Link href="/industries" className="text-text-primary hover:underline">Explore by industry →</Link>
         </p>
       </Section>
 
