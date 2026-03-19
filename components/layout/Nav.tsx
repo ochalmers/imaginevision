@@ -12,7 +12,7 @@ const navLinks = [
   { href: '/developers', label: 'Developers' },
   { href: '/resources', label: 'Resources' },
   { href: '/about', label: 'Company' },
-  { href: 'https://github.com/ochalmers/imaginevision/tree/main/ImagineDS', label: 'ImagineDS', external: true },
+  { href: '/design-system', label: 'ImagineDS' },
 ]
 
 export default function Nav() {

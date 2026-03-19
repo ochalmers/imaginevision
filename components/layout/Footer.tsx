@@ -43,7 +43,7 @@ const footerLinks = {
     { href: '/contact', label: 'Contact' },
   ],
   ImagineDS: [
-    { href: 'https://github.com/ochalmers/imaginevision/tree/main/ImagineDS', label: 'Design System', external: true },
+    { href: '/design-system', label: 'Design System' },
   ],
 }
 
