@@ -42,6 +42,9 @@ const footerLinks = {
     { href: '/careers', label: 'Careers' },
     { href: '/contact', label: 'Contact' },
   ],
+  ImagineDS: [
+    { href: 'https://github.com/ochalmers/imaginevision/tree/main/ImagineDS', label: 'Design System', external: true },
+  ],
 }
 
 export default function Footer() {
@@ -57,12 +60,23 @@ export default function Footer() {
               <ul className="space-y-2">
                 {links.map((link) => (
                   <li key={link.href}>
-                    <Link
-                      href={link.href}
-                      className="text-small text-text-body hover:text-text-heading transition-colors"
-                    >
-                      {link.label}
-                    </Link>
+                    {'external' in link && link.external ? (
+                      <a
+                        href={link.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-small text-text-body hover:text-text-heading transition-colors"
+                      >
+                        {link.label}
+                      </a>
+                    ) : (
+                      <Link
+                        href={link.href}
+                        className="text-small text-text-body hover:text-text-heading transition-colors"
+                      >
+                        {link.label}
+                      </Link>
+                    )}
                   </li>
                 ))}
               </ul>

@@ -12,6 +12,7 @@ const navLinks = [
   { href: '/developers', label: 'Developers' },
   { href: '/resources', label: 'Resources' },
   { href: '/about', label: 'Company' },
+  { href: 'https://github.com/ochalmers/imaginevision/tree/main/ImagineDS', label: 'ImagineDS', external: true },
 ]
 
 export default function Nav() {
@@ -28,18 +29,29 @@ export default function Nav() {
         <ul className="hidden items-center gap-8 md:flex">
           {navLinks.map((link) => (
             <li key={link.href}>
-              <Link
-                href={link.href}
-                className={`nav-link text-sm ${
-                  (link.href === '/about'
-                    ? ['/about', '/careers', '/contact'].includes(pathname || '')
-                    :                   pathname?.startsWith(link.href))
-                    ? 'text-text-heading'
-                    : ''
-                }`}
-              >
-                {link.label}
-              </Link>
+              {'external' in link && link.external ? (
+                <a
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="nav-link text-sm"
+                >
+                  {link.label}
+                </a>
+              ) : (
+                <Link
+                  href={link.href}
+                  className={`nav-link text-sm ${
+                    (link.href === '/about'
+                      ? ['/about', '/careers', '/contact'].includes(pathname || '')
+                      : pathname?.startsWith(link.href))
+                      ? 'text-text-heading'
+                      : ''
+                  }`}
+                >
+                  {link.label}
+                </Link>
+              )}
             </li>
           ))}
         </ul>
@@ -69,13 +81,25 @@ export default function Nav() {
           <ul className="space-y-4">
             {navLinks.map((link) => (
               <li key={link.href}>
-                <Link
-                  href={link.href}
-                  onClick={() => setMobileOpen(false)}
-                  className="block py-s-200 text-body-lg text-text-heading hover:text-text-primary"
-                >
-                  {link.label}
-                </Link>
+                {'external' in link && link.external ? (
+                  <a
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={() => setMobileOpen(false)}
+                    className="block py-s-200 text-body-lg text-text-heading hover:text-text-primary"
+                  >
+                    {link.label}
+                  </a>
+                ) : (
+                  <Link
+                    href={link.href}
+                    onClick={() => setMobileOpen(false)}
+                    className="block py-s-200 text-body-lg text-text-heading hover:text-text-primary"
+                  >
+                    {link.label}
+                  </Link>
+                )}
               </li>
             ))}
             <li className="pt-4">

@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign In — imagine.io</title>
+
+  <!-- Material Symbols (icons) -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=block" />
+
+  <style>
+    /* ─── PP Neue Montreal — web fonts (relative paths) ────────── */
+    @font-face {
+      font-family: 'PP Neue Montreal';
+      src: url('PP Neue Montreal - Full Family v2.6/WEB/PPNeueMontreal-Regular.woff2') format('woff2');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'PP Neue Montreal';
+      src: url('PP Neue Montreal - Full Family v2.6/WEB/PPNeueMontreal-Medium.woff2') format('woff2');
+      font-weight: 500;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'PP Neue Montreal';
+      src: url('PP Neue Montreal - Full Family v2.6/WEB/PPNeueMontreal-SemiBold.woff2') format('woff2');
+      font-weight: 600;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'PP Neue Montreal';
+      src: url('PP Neue Montreal - Full Family v2.6/WEB/PPNeueMontreal-Bold.woff2') format('woff2');
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    /* ─── Prism Design System Tokens ───────────────────────────── */
+    :root {
+      /* Brand Palette — Papaya */
+      --papaya-100: #fbdcce;
+      --papaya-200: #f7b89d;
+      --papaya-300: #f4956d;
+      --papaya-400: #f0713c;
+      --papaya-500: #ec4e0b;
+      --papaya-600: #bd3e09;
+      --papaya-700: #8e2f07;
+
+      /* Brand Palette — Green */
+      --green-500: #00b64c;
+      --green-600: #00923d;
+
+      /* Brand Palette — Red */
+      --red-100: #fbced7;
+      --red-400: #f03c60;  /* Red/400 */
+
+      /* Brand Palette — Grey */
+      --grey-50:  #f6f6f6;
+      --grey-100: #e5e5e5;
+      --grey-200: #cccccc;
+      --grey-300: #b2b2b2;
+      --grey-400: #999999;
+      --grey-500: #7f7f7f;
+      --grey-600: #666666;
+      --grey-700: #4d4d4d;
+      --grey-800: #333333;
+      --grey-900: #1a1a1a;
+
+      /* Foundations */
+      --white: #ffffff;
+      --dark:  #141414;
+
+      /* Semantic — Text */
+      --text-heading: #1a1a1a;   /* text/default/heading */
+      --text-body:    #4d4d4d;   /* text/default/body    */
+
+      /* Semantic — Surface */
+      --surface:           #ffffff;  /* surface/default      */
+      --surface-secondary: #f6f6f6;  /* surface/page-secondary */
+
+      /* Semantic — Border */
+      --border-default:   #f6f6f6;  /* border/default           */
+      --border-secondary: #e5e5e5;  /* border/default-secondary */
+
+      /* Alpha variants (for rgba usage) */
+      --papaya-500-glow-sm: rgba(236, 78, 11, 0.15);
+      --papaya-500-glow-md: rgba(236, 78, 11, 0.28);
+      --white-alpha-08:     rgba(255, 255, 255, 0.08);
+      --black-alpha-20:     rgba(0,   0,   0,   0.20);
+
+      /* Typography */
+      --font: 'PP Neue Montreal', 'Inter', system-ui, -apple-system, sans-serif;
+
+      /* Type Scale — sizes (px) */
+      --text-h3-size:     40px;  /* H3/SemiBold */
+      --text-h3-lh:       40px;
+      --text-h3-ls:       -1px;
+      --text-h6-size:     20px;  /* H6/Medium   */
+      --text-h6-lh:       24px;
+      --text-body-size:   16px;  /* body        */
+      --text-body-lh:     20px;
+      --text-caption-size: 12px; /* caption     */
+      --text-caption-lh:   16px;
+      --text-caption-ls:   2px;
+
+      /* Spacing Scale (Scale/100 … Scale/1400) */
+      --s-100:  4px;
+      --s-200:  8px;
+      --s-300:  12px;
+      --s-400:  16px;
+      --s-500:  20px;
+      --s-600:  24px;
+      --s-700:  28px;
+      --s-800:  32px;
+      --s-900:  36px;
+      --s-1000: 40px;
+      --s-1100: 48px;
+      --s-1200: 56px;
+      --s-1300: 64px;
+      --s-1400: 72px;
+
+      /* Border */
+      --bw-25: 1px;  /* Border Width/25  */
+      --bw-100: 4px; /* Border Width/100 */
+      --br-100: 4px; /* Border Radius/100 */
+      --br-200: 8px; /* Border Radius/200 */
+
+      /* Aliases for brevity */
+      --bw:   var(--bw-25);
+      --br-s: var(--br-100);
+      --br-m: var(--br-200);
+    }
+
+    /* ─── Reset ─────────────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: var(--font);
+      background: var(--surface);
+      color: var(--text-heading);
+      height: 100vh;
+      display: flex;
+      overflow: hidden;
+    }
+
+    /* ─── Left Panel ────────────────────────────────────────────── */
+    .panel-left {
+      width: 44%;
+      min-width: 480px;
+      background: var(--dark);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: var(--s-1100) var(--s-1200);
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Subtle Papaya glow bottom-left */
+    .panel-left::before {
+      content: '';
+      position: absolute;
+      bottom: -140px;
+      left: -100px;
+      width: 520px;
+      height: 520px;
+      background: radial-gradient(circle, var(--papaya-500-glow-sm) 0%, transparent 68%);
+      pointer-events: none;
+    }
+
+    .logo { width: 172px; position: relative; z-index: 1; }
+
+    .brand-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .tagline {
+      font-size: var(--text-h3-size);   /* H3/SemiBold */
+      font-weight: 600;
+      line-height: var(--text-h3-lh);
+      letter-spacing: var(--text-h3-ls);
+      color: var(--white);
+      margin-bottom: var(--s-500);
+    }
+
+    .tagline em {
+      font-style: normal;
+      color: var(--papaya-500);
+    }
+
+    .tagline-sub {
+      font-size: var(--text-body-size);   /* body/Regular */
+      font-weight: 400;
+      line-height: var(--text-body-lh);
+      color: var(--grey-400);
+      max-width: 360px;
+    }
+
+    /* Testimonial */
+    .testimonial {
+      border-top: var(--bw) solid var(--white-alpha-08);
+      padding-top: var(--s-600);
+      position: relative;
+      z-index: 1;
+    }
+
+    .testimonial-quote {
+      font-size: var(--text-caption-size);   /* caption/Regular */
+      line-height: var(--text-caption-lh);
+      color: var(--grey-300);
+      font-style: italic;
+      margin-bottom: var(--s-400);
+    }
+
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: var(--s-300);
+    }
+
+    .avatar {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--papaya-700);
+      color: var(--papaya-200);
+      font-size: var(--text-caption-size);  /* caption */
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .author-name {
+      font-size: var(--text-caption-size);  /* caption/Medium */
+      font-weight: 500;
+      color: var(--white);
+      line-height: var(--text-caption-lh);
+    }
+
+    .author-role {
+      font-size: var(--text-caption-size);  /* caption/Regular */
+      color: var(--grey-500);
+      letter-spacing: var(--text-caption-ls);
+    }
+
+    /* ─── Right Panel ───────────────────────────────────────────── */
+    .panel-right {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: var(--s-1100) var(--s-1400);
+      background: var(--surface);
+      overflow-y: auto;
+    }
+
+    .form-wrap {
+      width: 100%;
+      max-width: 400px;
+    }
+
+    /* Form header */
+    .form-header {
+      margin-bottom: var(--s-1100);
+    }
+
+    .form-header h1 {
+      font-size: var(--text-h3-size);    /* H3/SemiBold */
+      font-weight: 600;
+      line-height: var(--text-h3-lh);
+      letter-spacing: var(--text-h3-ls);
+      color: var(--text-heading);
+      margin-bottom: var(--s-200);
+    }
+
+    .form-header p {
+      font-size: var(--text-body-size);   /* body/Regular */
+      font-weight: 400;
+      line-height: var(--text-body-lh);
+      color: var(--text-body);
+    }
+
+    /* ─── Form Fields ───────────────────────────────────────────── */
+    .form-group { margin-bottom: var(--s-600); }
+
+    label {
+      display: block;
+      font-size: var(--text-body-size);   /* body/Medium */
+      font-weight: 500;
+      color: var(--text-heading);
+      margin-bottom: var(--s-200);
+      letter-spacing: 0;
+    }
+
+    .input-wrap {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+
+    .input-icon {
+      position: absolute;
+      left: var(--s-400);
+      color: var(--grey-400);
+      font-size: var(--text-h6-size);  /* 20px — H6 size */
+      pointer-events: none;
+      transition: color 0.18s;
+    }
+
+    .input-toggle {
+      position: absolute;
+      right: var(--s-300);
+      background: none;
+      border: none;
+      padding: var(--s-100);
+      cursor: pointer;
+      color: var(--grey-400);
+      display: flex;
+      align-items: center;
+      transition: color 0.18s;
+      border-radius: var(--br-s);
+    }
+
+    .input-toggle:hover { color: var(--grey-700); }
+    .input-toggle .material-symbols-outlined { font-size: var(--text-h6-size); }
+
+    input[type="email"],
+    input[type="password"],
+    input[type="text"] {
+      width: 100%;
+      height: var(--s-1100);
+      padding: 0 var(--s-400) 0 44px;
+      border: var(--bw) solid var(--border-secondary);
+      border-radius: var(--br-m);
+      font-family: var(--font);
+      font-size: var(--text-body-size);   /* body/Regular */
+      color: var(--text-heading);
+      background: var(--surface);
+      outline: none;
+      transition: border-color 0.18s, box-shadow 0.18s;
+      -webkit-appearance: none;
+    }
+
+    input.has-toggle { padding-right: 44px; }
+    input::placeholder { color: var(--grey-300); }
+
+    input:focus {
+      border-color: var(--papaya-500);
+      box-shadow: 0 0 0 3px var(--papaya-100);
+    }
+
+    .input-wrap:focus-within .input-icon { color: var(--papaya-500); }
+
+    input.is-error {
+      border-color: var(--red-400);
+      box-shadow: 0 0 0 3px var(--red-100);
+    }
+
+    .field-error {
+      display: none;
+      align-items: center;
+      gap: var(--s-100);
+      margin-top: var(--s-100);
+      font-size: var(--text-caption-size);   /* caption/Regular */
+      color: var(--red-400);
+      letter-spacing: 0;
+    }
+
+    .field-error.show { display: flex; }
+    .field-error .material-symbols-outlined { font-size: var(--text-caption-size); }
+
+    /* ─── Row (remember + forgot) ───────────────────────────────── */
+    .form-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: var(--s-800);
+    }
+
+    .remember-label {
+      display: flex;
+      align-items: center;
+      gap: var(--s-200);
+      font-size: var(--text-caption-size);   /* caption/Regular */
+      color: var(--text-body);
+      cursor: pointer;
+      margin: 0;
+    }
+
+    .remember-label input[type="checkbox"] {
+      width: 16px;
+      height: 16px;
+      padding: 0;
+      accent-color: var(--papaya-500);
+      cursor: pointer;
+      border-radius: var(--br-s);
+    }
+
+    .link {
+      font-size: var(--text-body-size);   /* body/Medium */
+      font-weight: 500;
+      color: var(--papaya-500);
+      text-decoration: none;
+      transition: color 0.18s;
+    }
+
+    .link:hover { color: var(--papaya-600); text-decoration: underline; }
+
+    /* ─── Primary Button ────────────────────────────────────────── */
+    .btn-primary {
+      width: 100%;
+      height: 48px;
+      background: var(--papaya-500);
+      color: var(--white);
+      font-family: var(--font);
+      font-size: var(--text-body-size);   /* body/SemiBold */
+      font-weight: 600;
+      border: none;
+      border-radius: var(--br-m);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: var(--s-200);
+      transition: background 0.18s, box-shadow 0.18s, transform 0.1s;
+      letter-spacing: 0;
+    }
+
+    .btn-primary:hover {
+      background: var(--papaya-600);
+      box-shadow: 0 var(--s-100) 18px var(--papaya-500-glow-md);
+    }
+
+    .btn-primary:active {
+      background: var(--papaya-700);
+      transform: translateY(1px);
+      box-shadow: none;
+    }
+
+    .btn-primary:disabled {
+      background: var(--grey-200);
+      color: var(--grey-400);
+      cursor: not-allowed;
+      box-shadow: none;
+      transform: none;
+    }
+
+    /* Loading spinner */
+    .spinner {
+      width: 18px;
+      height: 18px;
+      border: var(--bw-25) solid rgba(255,255,255,0.3);
+      border-top-color: var(--white);
+      border-radius: 50%;
+      animation: spin 0.65s linear infinite;
+      display: none;
+      flex-shrink: 0;
+    }
+
+    .btn-primary.is-loading .spinner  { display: block; }
+    .btn-primary.is-loading .btn-label { display: none; }
+
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* ─── Divider ───────────────────────────────────────────────── */
+    .divider {
+      display: flex;
+      align-items: center;
+      gap: var(--s-400);
+      margin: var(--s-600) 0;
+    }
+
+    .divider::before,
+    .divider::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border-secondary);
+    }
+
+    .divider span {
+      font-size: var(--text-caption-size);   /* caption/Regular */
+      color: var(--grey-400);
+      white-space: nowrap;
+    }
+
+    /* ─── SSO Buttons ───────────────────────────────────────────── */
+    .btn-sso {
+      width: 100%;
+      height: 48px;
+      background: var(--surface);
+      color: var(--text-heading);
+      font-family: var(--font);
+      font-size: var(--text-body-size);   /* body/Medium */
+      font-weight: 500;
+      border: var(--bw) solid var(--border-secondary);
+      border-radius: var(--br-m);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: var(--s-300);
+      transition: background 0.18s, border-color 0.18s;
+      margin-bottom: var(--s-300);
+    }
+
+    .btn-sso:hover {
+      background: var(--surface-secondary);
+      border-color: var(--grey-300);
+    }
+
+    .btn-sso:last-of-type { margin-bottom: 0; }
+
+    .btn-sso svg { width: 18px; height: 18px; flex-shrink: 0; }
+
+    /* ─── Sign-up Nudge ─────────────────────────────────────────── */
+    .signup-row {
+      text-align: center;
+      margin-top: var(--s-600);
+      font-size: var(--text-caption-size);   /* caption/Regular */
+      color: var(--text-body);
+    }
+
+    /* ─── Toast ─────────────────────────────────────────────────── */
+    .toast {
+      position: fixed;
+      bottom: var(--s-800);
+      left: 50%;
+      transform: translateX(-50%) translateY(80px);
+      background: var(--grey-900);
+      color: var(--white);
+      font-size: var(--text-body-size);   /* body/Medium */
+      font-weight: 500;
+      padding: var(--s-300) var(--s-500);
+      border-radius: var(--br-m);
+      display: flex;
+      align-items: center;
+      gap: var(--s-200);
+      box-shadow: 0 var(--s-200) var(--s-800) var(--black-alpha-20);
+      transition: transform 0.3s cubic-bezier(0.34,1.56,0.64,1), opacity 0.3s;
+      opacity: 0;
+      pointer-events: none;
+      white-space: nowrap;
+    }
+
+    .toast.show {
+      transform: translateX(-50%) translateY(0);
+      opacity: 1;
+    }
+
+    .toast .material-symbols-outlined { font-size: var(--text-h6-size); color: var(--green-500); }
+  </style>
+</head>
+<body>
+
+  <!-- ── Left: Brand Panel ──────────────────────────────────────── -->
+  <section class="panel-left" aria-hidden="true">
+
+    <img
+      src="Logos/Horizontal Light.png"
+      alt="imagine.io"
+      class="logo"
+    />
+
+    <div class="brand-content">
+      <h2 class="tagline">
+        Create, manage &amp;<br/>
+        <em>deliver</em> your assets<br/>
+        at scale.
+      </h2>
+      <p class="tagline-sub">
+        The all-in-one digital asset platform built for modern creative teams.
+      </p>
+    </div>
+
+    <blockquote class="testimonial">
+      <p class="testimonial-quote">
+        "imagine.io transformed how our team manages and delivers creative assets. Fast, reliable, and beautifully designed."
+      </p>
+      <div class="testimonial-author">
+        <div class="avatar">AK</div>
+        <div>
+          <div class="author-name">Aanya Kumar</div>
+          <div class="author-role">Head of Design · Horizon Labs</div>
+        </div>
+      </div>
+    </blockquote>
+
+  </section>
+
+  <!-- ── Right: Form Panel ──────────────────────────────────────── -->
+  <main class="panel-right">
+    <div class="form-wrap">
+
+      <div class="form-header">
+        <h1>Welcome back</h1>
+        <p>Sign in to your imagine.io account</p>
+      </div>
+
+      <form id="loginForm" novalidate>
+
+        <!-- Email -->
+        <div class="form-group">
+          <label for="email">Email address</label>
+          <div class="input-wrap">
+            <span class="material-symbols-outlined input-icon">mail</span>
+            <input
+              type="email"
+              id="email"
+              placeholder="you@company.com"
+              autocomplete="email"
+            />
+          </div>
+          <div class="field-error" id="emailError">
+            <span class="material-symbols-outlined">error</span>
+            Please enter a valid email address.
+          </div>
+        </div>
+
+        <!-- Password -->
+        <div class="form-group">
+          <label for="password">Password</label>
+          <div class="input-wrap">
+            <span class="material-symbols-outlined input-icon">lock</span>
+            <input
+              type="password"
+              id="password"
+              class="has-toggle"
+              placeholder="Enter your password"
+              autocomplete="current-password"
+            />
+            <button
+              type="button"
+              class="input-toggle"
+              id="togglePwd"
+              aria-label="Show or hide password"
+              tabindex="-1"
+            >
+              <span class="material-symbols-outlined" id="eyeIcon">visibility</span>
+            </button>
+          </div>
+          <div class="field-error" id="passwordError">
+            <span class="material-symbols-outlined">error</span>
+            Password must be at least 8 characters.
+          </div>
+        </div>
+
+        <!-- Remember + Forgot -->
+        <div class="form-row">
+          <label class="remember-label">
+            <input type="checkbox" id="rememberMe" />
+            Remember me
+          </label>
+          <a href="#" class="link">Forgot password?</a>
+        </div>
+
+        <!-- Sign In -->
+        <button type="submit" class="btn-primary" id="submitBtn">
+          <span class="btn-label">Sign in</span>
+          <div class="spinner"></div>
+        </button>
+
+      </form>
+
+      <div class="divider"><span>or continue with</span></div>
+
+      <!-- Google SSO -->
+      <button class="btn-sso" type="button">
+        <svg viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+          <path d="M17.64 9.2c0-.637-.057-1.251-.164-1.84H9v3.481h4.844c-.209 1.125-.843 2.078-1.796 2.717v2.258h2.908C16.658 14.131 17.64 11.823 17.64 9.2z" fill="#4285F4"/>
+          <path d="M9 18c2.43 0 4.467-.806 5.956-2.184l-2.908-2.258c-.806.54-1.837.86-3.048.86-2.344 0-4.328-1.584-5.036-3.711H.957v2.332A8.997 8.997 0 0 0 9 18z" fill="#34A853"/>
+          <path d="M3.964 10.707A5.41 5.41 0 0 1 3.682 9c0-.593.102-1.17.282-1.707V4.961H.957A8.996 8.996 0 0 0 0 9c0 1.452.348 2.827.957 4.039l3.007-2.332z" fill="#FBBC05"/>
+          <path d="M9 3.58c1.321 0 2.508.454 3.44 1.345l2.582-2.58C13.463.891 11.426 0 9 0A8.997 8.997 0 0 0 .957 4.961L3.964 7.293C4.672 5.163 6.656 3.58 9 3.58z" fill="#EA4335"/>
+        </svg>
+        Continue with Google
+      </button>
+
+      <!-- Microsoft SSO -->
+      <button class="btn-sso" type="button">
+        <svg viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+          <rect x="1"   y="1"   width="7.5" height="7.5" fill="#F25022"/>
+          <rect x="9.5" y="1"   width="7.5" height="7.5" fill="#7FBA00"/>
+          <rect x="1"   y="9.5" width="7.5" height="7.5" fill="#00A4EF"/>
+          <rect x="9.5" y="9.5" width="7.5" height="7.5" fill="#FFB900"/>
+        </svg>
+        Continue with Microsoft
+      </button>
+
+      <p class="signup-row">
+        Don't have an account?&nbsp;<a href="#" class="link">Create one free</a>
+      </p>
+
+    </div>
+  </main>
+
+  <!-- Toast notification -->
+  <div class="toast" id="toast" role="status" aria-live="polite">
+    <span class="material-symbols-outlined">check_circle</span>
+    Signed in successfully
+  </div>
+
+  <script>
+    /* ── Password Toggle ──────────────────────────────────────── */
+    const pwdInput  = document.getElementById('password');
+    const toggleBtn = document.getElementById('togglePwd');
+    const eyeIcon   = document.getElementById('eyeIcon');
+
+    toggleBtn.addEventListener('click', () => {
+      const show = pwdInput.type === 'password';
+      pwdInput.type      = show ? 'text' : 'password';
+      eyeIcon.textContent = show ? 'visibility_off' : 'visibility';
+    });
+
+    /* ── Validation helpers ──────────────────────────────────── */
+    const emailInput = document.getElementById('email');
+    const emailError = document.getElementById('emailError');
+    const pwdError   = document.getElementById('passwordError');
+    const submitBtn  = document.getElementById('submitBtn');
+
+    const isValidEmail = v => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
+
+    function setError(input, errorEl, show) {
+      input.classList.toggle('is-error', show);
+      errorEl.classList.toggle('show', show);
+    }
+
+    emailInput.addEventListener('input', () => {
+      if (isValidEmail(emailInput.value)) setError(emailInput, emailError, false);
+    });
+
+    pwdInput.addEventListener('input', () => {
+      if (pwdInput.value.length >= 8) setError(pwdInput, pwdError, false);
+    });
+
+    /* ── Form Submit ─────────────────────────────────────────── */
+    document.getElementById('loginForm').addEventListener('submit', e => {
+      e.preventDefault();
+
+      const emailOk = isValidEmail(emailInput.value);
+      const pwdOk   = pwdInput.value.length >= 8;
+
+      setError(emailInput, emailError, !emailOk);
+      setError(pwdInput,   pwdError,   !pwdOk);
+
+      if (!emailOk || !pwdOk) return;
+
+      /* Simulate async request */
+      submitBtn.classList.add('is-loading');
+      submitBtn.disabled = true;
+
+      setTimeout(() => {
+        submitBtn.classList.remove('is-loading');
+        submitBtn.disabled = false;
+
+        /* Success state */
+        submitBtn.style.background = 'var(--green-600)';
+        submitBtn.querySelector('.btn-label').textContent = '✓  Signed in';
+
+        showToast();
+
+        setTimeout(() => {
+          submitBtn.style.background = '';
+          submitBtn.querySelector('.btn-label').textContent = 'Sign in';
+        }, 3000);
+      }, 1800);
+    });
+
+    /* ── Toast ───────────────────────────────────────────────── */
+    function showToast() {
+      const t = document.getElementById('toast');
+      t.classList.add('show');
+      setTimeout(() => t.classList.remove('show'), 3500);
+    }
+  </script>
+
+</body>
+</html>
